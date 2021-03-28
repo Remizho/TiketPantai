@@ -4,14 +4,15 @@
 				<div class="container" >
 					<div class="row fullscreen d-flex align-items-center justify-content-center">
 						<div class="banner-content col-lg-9 col-md-12">
-							<h6>Now you can watch</h6>
+							<h6>Now All Ngalam Beaches You Can Visit</h6>
 							<h1 class="text-white">
-								Our Next Event			
+								Welcome To			
 							</h1>
 							<div>
 								<?php if(is_array($name)){?>
                   					<?php foreach ($name as $key) {?>
-								<h2 class="text-white"><?php echo $key->name ; ?></h2>
+								<h2 class="text-white">Mantai Ngalam</h2>
+								<!-- <h2 class="text-white"><?php echo $key->name ; ?></h2> -->
 								<?php }}else{?>
 								<h2 class="text-white"> There's no upcoming events</h2>
 								<?php }?>
@@ -19,14 +20,37 @@
 
 							</div>
 							<div class="countdown">
-								<div id="timer" class="text-white">
+								<!-- <div id="timer" class="text-white">
     									
- 					 			</div>
+ 					 			</div> -->
 							</div>
 						</div>											
 					</div>
 				</div>
 			</section>
+			<div style="color:black;margin-bottom: 50px;margin-top: 50px;">
+				<div style="margin-right: 300px;margin-left: 300px;">
+					<h1 style="text-align: center;">Pantai Balekambang</h1>
+					<br>
+					<table style="margin-bottom: 30px;">
+						<tr>
+							<td><img src="<?php echo base_url();?>assets/imgEvent/tiket.jpg" style="border-radius: 10px;width:300px;"></td>
+							<td style="margin-left: 20px;">Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</td>
+						</tr>
+					</table>
+					<form>
+					<h1>Silahkan berikan komentar anda</h1><br /><br>
+					Nama Anda :</br>
+					<input type=text name="text" id="teks" size="35"><br /><br> 
+					Komentar :</br>
+					<textarea rows="2" name="b" id="kepala" cols="38" wrap="virtual"></textarea><br /><br>
+					<input type="button" onclick="kirim()" value="Komentar" />
+					<input name="Clear" type="reset" value="Batal" />
+					</form><br />
+					<hr style="border: 1px dashed black;"></hr>
+					<hr></hr>
+				</div>
+			</div>
 			<!-- End banner Area -->
 		<!-- Start price Area -->
 			<section class="price-area section-gap" id="price">
@@ -39,7 +63,7 @@
                   					<h1 class="mb-10">Ticket for <?php echo $key->name ; ?> </h1>
                   					<p style="color: black">Who are in extremely love with <?php echo $key->artist ; ?>.</p>
 									<?php }}else{?>
-									<h1 class="mb-10">There is No Upcoming Event's Ticket</h1>
+									<h1 class="mb-10">Selamat Menikmati Libuaranu!</h1>
 								<?php }?>
 							</div>
 						</div>
@@ -54,7 +78,6 @@
 							<div class="top-part">
 								<h1 class="package-no"><?php echo $no++; ?></h1><br>
 							<div class="price-title">
-								<h2><?php echo $key->seatZone ; ?></h2>
 							</div></div>
 							<div class="package-list">
 								<ul>
@@ -85,7 +108,7 @@
 		<?php if (is_array($sche)) { ?>
 		<section class="spekers-area pb-100" id="speakers">			
 		<br>
-			<center><h1>Our Upcoming Events in This Month</h1></center>
+			<center><h1>Jadwal tiket bulan ini</h1></center>
 		<br>
 		
 			
@@ -105,16 +128,6 @@
 											<h3 class="text-white"><?php echo $key->category; ?></h3><br>
 											<font size="4">
 											<p>
-												This event be held on: <br>
-												Date&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:<b>&nbsp;<?php echo $key->date; ?></b><br>
-												Start Time&nbsp;: <b><?php echo $key->startTime; ?></b><br>
-												End Time&nbsp;&nbsp;&nbsp;: <b><?php echo $key->endTime; ?></b><br>
-											</p>
-											</font>
-											<?php echo $key->venue; ?>,&nbsp;<?php echo $key->city; ?>,&nbsp;<?php echo $key->country; ?>
-											<br>
-											
-											
 											<ul>
 												<a href="#"><i class="fa fa-facebook fa-2x"></i></a>
 												<a href="#"><i class="fa fa-twitter fa-2x"></i></a>
@@ -126,7 +139,6 @@
                             				<button class="btn btn-secondary">See Details</button></a>                    						
               								
               									
-              										<a href="<?php echo $key->location;?>" target="blank">
                             				<button class="btn btn-secondary">Maps</button></a>
               										
                             				
@@ -151,16 +163,7 @@
                     <div class="row">
                     <div class="col-6 scroll" style='overflow:auto;width:400px;height:500px;'>
                       <center><img src="<?php echo base_url()?>/assets/imgEvent/<?php echo $search[0]->pict?>" width="200px"></center><br>
-                        <p align="justify" style="color: black">
-                        MeetUp is a ticket search engine that makes finding tickets to live entertainment a cinch. With the largest ticket selection of any site on the web, we have <?php echo $search[0]->artist ;?> tickets for every fan at every price point. As most concert fans know, <?php echo $search[0]->artist ;?> puts on one of the best performances of any artist currently touring. Fans of pop music won't want to miss this show.
-
-                        This concert takes place at <?php echo $search[0]->startTime ;?> p.m. It is smart to travel to the venue before this start time, however, in order to avoid missing any of the show. The venue will be open ahead of time so that attendees can find their seats, or if the event is general admission, find a good place to stand or sit.
-
-                        <?php echo $search[0]->artist ;?> performance at <?php echo $search[0]->venue ;?> is sure to be memorable. This venue is known to be one of the best in <?php echo $search[0]->city ;?>, if not all of the <?php echo $search[0]->country ;?>. If you have never been to <?php echo $search[0]->venue ;?>, MeetUp’s "View from Seat Zone" feature offers a preview of what your view will look like prior to making a purchase!
-
-                         <?php echo $search[0]->artist ;?> ticket prices can frequently change based on a number of factors, such as time of day, day of week, location, and more. If you see a price point that you are comfortable with right now, we recommend making a purchase while that ticket is still available.
-
-                        Those seeking a better value should consider upper-level seating sections where tickets may be available at a lower price, while those looking for the best seat in the house should explore the lower levels and floor seating. The MeetUp event page shows all available tickets on the market, and fans can sort by either ticket price or our Deal Score feature to find their perfect seat.</p>
+                        <p align="justify" style="color: black"></p>
                     </div>
                     <div class="col-6">
                       <table class="table">
@@ -172,19 +175,16 @@
                             <tbody style="color: black">
                               <tr class="no-hover">
                                 <th scope="row">Venue</th>
-                                <td><h1><?php echo $search[0]->venue ;?>,&nbsp;<?php echo $search[0]->city ;?>,&nbsp;<?php echo $search[0]->country ;?></h1></td>
+                                
                               </tr>
                               <tr class="no-hover">
                                 <th scope="row">Date</th>
-                                <td><?php echo $search[0]->date ;?></td>
                             </tr>
                             <tr class="no-hover">
                                 <th scope="row">Time</th>
-                                <td><?php echo $search[0]->startTime ;?></td>
                               </tr>
                               <tr class="no-hover">
                                 <th scope="row">Performer</th>
-                                <td><?php echo $search[0]->artist ;?></td>
                               </tr>
                             </tbody>
                       </table>
@@ -201,9 +201,9 @@
 						<?php }else{?>	
 					<section class="spekers-area pb-100" id="speakers">	
 						<br>
-							<center><h1>Our Upcoming Events in This Month</h1></center>
+							<center><h1>Jadwal tiket bulan ini</h1></center>
 						<br>
-							<center><h3>There's no upcoming events</h3></center>
+							<center><h3>Tidak ada jadwal bulan ini</h3></center>
 							<?php }?>	
 					</section>
 

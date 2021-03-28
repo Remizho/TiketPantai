@@ -1,6 +1,6 @@
 	<!DOCTYPE html>
-	<html lang="zxx" class="no-js" id="refreshTime">
-	<head>
+	<html id="abc" name="name1" lang="zxx">
+	<head id="abc" name="name2">
 		<!-- Mobile Specific Meta -->
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<!-- Favicon-->
@@ -40,19 +40,29 @@
 					padding-bottom: 10px;
 				}
 			</style>
+			<script type="text/javascript" id="abc">
+			    function kirim() {
+			     var a=document.getElementById("abc").innerHTML;
+			     var b=document.getElementById("teks").value;
+			     var c=document.getElementById("kepala").value;
+			     document.write(a + "<br />" + "<br />");
+			     document.write(b + "<br />");
+			     document.write(c);
+			  }
+			</script>
 		</head>
 <body>
 <header id="header" id="home" >
 			    <div class="container">
 			    	<div class="row align-items-center justify-content-between d-flex">
 				      <div id="logo">
-				        <a href="<?php echo site_url();?>/HomeUser/lihat"><img src="<?php echo base_url();?>assets/img/logo1.png" alt="" title="" width="200"/></a>
+				        <a href="<?php echo site_url();?>/HomeUser/lihat"><img src="<?php echo base_url();?>assets/img/logo2.png" alt="" title="" width="120"/></a>
 				      </div>
 				      <nav id="nav-menu-container">
 				        <ul class="nav-menu">
 				          <li class="menu-active"><a href="<?php echo site_url();?>/HomeUser/lihat">Home</a></li>
-				          <li><a href="#speakers">Latest Event</a></li>
-                    <li class="menu-has-children"><a href="<?php echo site_url();?>/HomeUser/allEvent">All Event</a>
+				          <!-- <li><a href="#speakers">Latest Event</a></li> -->
+                    <li class="menu-has-children"><a href="<?php echo site_url();?>/HomeUser/allEvent">List Pantai</a>
                         <ul>
                         <div class="col-md-6 text-left text-uppercase">
                           <b><p style="color: black">Category</p></b>

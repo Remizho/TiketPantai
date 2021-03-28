@@ -21,8 +21,11 @@
         public function cekDb($password)
         {
             $this->load->model('User');
+            //ambil data username dan pass dari inputan
             $username = $this->input->post('username'); 
             $result = $this->User->login($username,$password);
+            //jika username dan pass di database sesuai dengan inputan maka ambil seassion dari data id username dan levek
+
             if($result){
                 $session_array = array();
                 foreach ($result as $key) {
@@ -31,6 +34,7 @@
                         'username'=>$key->username,
                         'level'=>$key->level
                     );
+                    //setting userdatanya dengan nama logged_in
                     $this->session->set_userdata('logged_in',$session_array);
                 }
                 return true;

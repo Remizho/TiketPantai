@@ -3,7 +3,7 @@
           <br><br>
           <div class="row">
             <div class="col-12">
-              <div class="card" style="background-color: #161616;padding-top: 10px; padding-bottom: 10px; padding-left: 10px;box-shadow: 0 0px 0px rgba(0, 0, 0, 0);"><h2 class="text-white"><?php echo $search[0]->name;?>&nbsp;</h2></div>
+              <!-- <div class="card" style="background-color: #161616;padding-top: 10px; padding-bottom: 10px; padding-left: 10px;box-shadow: 0 0px 0px rgba(0, 0, 0, 0);"><h2 class="text-white"><?php echo $search[0]->name;?>&nbsp;</h2></div> -->
                 </div>
               </div>
             </div>
