@@ -1,69 +1,41 @@
 <?php
-
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Home extends CI_Controller {
 
-    public function index()
-    {
-       $this->load->view('');
-    }
+	public function index()
+	{
 
-    public function catEvent()
-    {
-        $session_data=$this->session->userdata('logged_in');
-        $data['username']=$session_data['username'];
-        $data['level']=$session_data['level'];
-        $data['id']=$session_data['id'];
+		if($this->session->userdata('logged_in')) 
+			redirect('user/dashboard');
 
-        $this->load->model('user');
-        $id = $data['id'];
-        $user = $data['username'];
-        $data['name'] = $this->user->selectAll($id,$user);
+		$this->load->view('templates/header');
+		$this->load->view('pages/v_home');
+		$this->load->view('templates/footer');
+	
+	}
 
-        $this->load->model('Notif');
-        $data['notif'] = $this->Notif->notifikasi();
-        $data['countNotif'] = $this->Notif->count();
+	public function pesan_berhasil()
+	{
+		$this->load->view('templates/header');
+		$this->load->view('pages/pesan_berhasil');
+		$this->load->view('templates/footer');
+	
+	}
 
-        $this->load->view('admin/header',$data);
-        $this->load->view('admin/sidebar');
-        $this->load->view('admin/catEvent');
-        
-    }
+	public function about()
+	{
+		$this->load->view('templates/header');
+		$this->load->view('pages/about');
+		$this->load->view('templates/footer');
+	}
 
-    public function getAllCatGrid()
-    {
-        $this->load->model('EventCategoryModel');
-        $result = $this->EventCategoryModel->getAllCat(); 
-        header("Content-Type: application/json");
-        echo json_encode($result);
-    }
+	public function detail_pantai()
+	{
+		$this->load->view('templates/header');
+		$this->load->view('pages/detail_pantai');
+		$this->load->view('templates/footer');
+	}
 
-    public function addCatGrid(){
-        
-        $this->load->model('EventCategoryModel');
-
-        
-            $this->EventCategoryModel->saveCat();
-            
-    }
-
-    public function deleteCatGrid()
-    {
-        $this->load->model('EventCategoryModel');
-        $id = $this->input->post('idCat'); 
-        $this->EventCategoryModel->deleteCat($id);
-    }
-
-    public function updateCatGrid()
-    {
-        $this->load->model('EventCategoryModel');
-        $id = $this->input->post('idCat'); 
-        $this->EventCategoryModel->updateCat($id);
-    }
 
 }
-
-/* End of file Home.php */
-
-?>
