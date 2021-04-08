@@ -21,8 +21,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           </form>
         </div>
         <ul class="menu_list menu_mm">
-          <li class="menu_item menu_mm"><a href="<?php echo base_url() ?>home">Home</a></li>
-          <li class="menu_item menu_mm"><a href="<?php echo base_url() ?>home/about">About us</a></li>
+          <li class="menu_item menu_mm"><a href="<?php echo base_url() ?>home">Halaman Utama</a></li>
+          <li class="menu_item menu_mm"><a href="<?php echo base_url() ?>home/about">Tentang Kami</a></li>
         </ul>
 
         <!-- Menu Social -->
@@ -63,8 +63,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       <div class="row">
         <div class="col">
           <div class="section_title text-center">
-            <h2>Special offers</h2>
-            <div>take a look at these offers</div>
+            <h2>PROMO ANDA</h2>
+            <div>jangan sampai terlewat</div>
           </div>
         </div>
       </div>
@@ -78,8 +78,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="special_item">
               <div class="special_item_background"><img src="<?php echo base_url() ?>assets/destino/images/special_1.jpg" alt="https://unsplash.com/@garciasaldana_"></div>
               <div class="special_item_content text-center">
-                <div class="special_category">Visiting</div>
-                <div class="special_title"><a href="offers.html">Indonesia</a></div>
+                <div class="special_category">Pantai</div>
+                <div class="special_title"><a href="offers.html">Balekambang</a></div>
               </div>
             </div>
           </div>
@@ -89,8 +89,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="special_item d-flex flex-column align-items-center justify-content-center">
               <div class="special_item_background"><img src="<?php echo base_url() ?>assets/destino/images/special_2.jpg" alt="https://unsplash.com/@varshesh"></div>
               <div class="special_item_content text-center">
-                <div class="special_category">Culture</div>
-                <div class="special_title"><a href="offers.html">India</a></div>
+                <div class="special_category">Pantai</div>
+                <div class="special_title"><a href="offers.html">Sendiki</a></div>
               </div>
             </div>
           </div>
@@ -100,8 +100,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="special_item d-flex flex-column align-items-center justify-content-center">
               <div class="special_item_background"><img src="<?php echo base_url() ?>assets/destino/images/special_3.jpg" alt="https://unsplash.com/@paulgilmore_"></div>
               <div class="special_item_content text-center">
-                <div class="special_category">Sunbathing</div>
-                <div class="special_title"><a href="offers.html">Thailand</a></div>
+                <div class="special_category">Pantai</div>
+                <div class="special_title"><a href="offers.html">Bajulmati</a></div>
               </div>
             </div>
           </div>
@@ -111,8 +111,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="special_item d-flex flex-column align-items-center justify-content-center">
               <div class="special_item_background"><img src="<?php echo base_url() ?>assets/destino/images/special_4.jpg" alt="https://unsplash.com/@hellolightbulb"></div>
               <div class="special_item_content text-center">
-                <div class="special_category">Visiting</div>
-                <div class="special_title"><a href="offers.html">Bali</a></div>
+                <div class="special_category">Pantai</div>
+                <div class="special_title"><a href="offers.html">Watuleter</a></div>
               </div>
             </div>
           </div>
@@ -122,8 +122,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="special_item d-flex flex-column align-items-center justify-content-center">
               <div class="special_item_background"><img src="<?php echo base_url() ?>assets/destino/images/special_5.jpg" alt="https://unsplash.com/@dnevozhai"></div>
               <div class="special_item_content text-center">
-                <div class="special_category">Visiting</div>
-                <div class="special_title"><a href="offers.html">France</a></div>
+                <div class="special_category">Pantai</div>
+                <div class="special_title"><a href="offers.html">Sendang Biru</a></div>
               </div>
             </div>
           </div>

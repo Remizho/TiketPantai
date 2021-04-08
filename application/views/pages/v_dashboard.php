@@ -65,7 +65,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   </div>
 
   <!-- Find Form -->
-
+<br><br><br><br><br><br><br><br><br>
   <div class="find">
     <!-- Image by https://unsplash.com/@garciasaldana_ -->
     <div class="find_background parallax-window" data-parallax="scroll" data-image-src="<?php echo base_url() ?>assets/destino/images/find.jpg" data-speed="0.8"></div>
@@ -86,7 +86,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           <?php echo form_open_multipart( 'admin/pesanan_create2', array('class' => 'needs-validation', 'novalidate' => '') ); ?>
               <div class="find_item">
                 <div>Name:</div>
-                <input type="text" class="destination find_input" name="nama_penum"  required="required" placeholder="Keyword here">
+                <input type="text" class="destination find_input" name="nama_penum"  required="required">
               </div>
               <div class="find_item">
                 <div>Date:</div>
@@ -94,7 +94,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               </div>
               <div class="" style="width: 356px;">
                 <div style="color: white">Asal:</div>
-                <input type="text" class="destination find_input"  name="asal_penum" required="required" placeholder="Keyword here">
+                <input type="text" class="destination find_input"  name="asal_penum" required="required">
               </div>
               <div class="" style="width: 356px;">
                 <div style="color: white">Tujuan:</div>
@@ -109,7 +109,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               </div>
               <div class="" style="width: 356px;">
                 <div style="color: white">Jumlah Pengunjung</div>
-                <input type="number" min="0" class="destination find_input" name="no_penum" required="required" placeholder="Keyword here">
+                <input type="number" min="0" class="destination find_input" name="no_penum" required="required">
               </div>
               <button type="submit" class="button find_button">Pesan</button>
             </form>
