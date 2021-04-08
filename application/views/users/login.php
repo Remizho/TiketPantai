@@ -4,7 +4,7 @@
     <div class="container">
       <div class="row">
         <div class="col-12">
-          <div class="find_title text-center">Sign In</div>
+          <div class="find_title text-center">Masuk</div>
         </div>
         <div class="col-12"><center>
           <div class="find_form_container">
@@ -17,7 +17,7 @@
                 <div>Password:</div>
                 <input type="password" class="destination find_input"  name="password" required="required" placeholder="Keyword here">
               </div>
-              <button type="submit" class="button find_button">Login</button>
+              <button type="submit" class="button find_button">Masuk</button>
             </form>
             <br><font style="color: white">belum punya akun? <a href="<?php echo base_url() ?>user/register">Dafatar Disini.</a></font>
           </div>

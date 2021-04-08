@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Travelling</title>
+<title>Mantai Ngalam</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="Destino project">
@@ -64,18 +64,18 @@
             <!-- Main Navigation -->
             <nav class="main_nav ml-auto" style="margin-right: -150px">
               <ul class="main_nav_list">
-                <li class="main_nav_item"><a href="<?php echo base_url() ?>home">Home</a></li>
-                <li class="main_nav_item"><a href="<?php echo base_url() ?>home/about">About us</a></li>
+                <li class="main_nav_item"><a href="<?php echo base_url() ?>home">Halaman Utama</a></li>
+                <li class="main_nav_item"><a href="<?php echo base_url() ?>home/about">Tentang Kami</a></li>
 
                 <?php if(!$this->session->userdata('logged_in')) : ?>
                   <!-- <div class="btn-group" role="group" aria-label="Data baru"> -->
-                    <li class="main_nav_item"><a href="<?php echo base_url() ?>user/login">Login</a></li>
+                    <li class="main_nav_item"><a href="<?php echo base_url() ?>user/login">Masuk</a></li>
                     <!-- <li class="main_nav_item"><a href="<?php echo base_url() ?>user/register">Register</a></li> -->
                   <!-- </div> -->
                 <?php endif; ?>
 
                 <?php if($this->session->userdata('logged_in')) : ?>
-                  <li class="main_nav_item"><a href="<?php echo base_url() ?>user/logout">Logout</a></li>
+                  <li class="main_nav_item"><a href="<?php echo base_url() ?>user/logout">Keluar</a></li>
                 <?php endif; ?>
 
               </ul>

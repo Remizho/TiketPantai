@@ -22,8 +22,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           </form>
         </div>
         <ul class="menu_list menu_mm">
-          <li class="menu_item menu_mm"><a href="<?php echo base_url() ?>home">Home</a></li>
-          <li class="menu_item menu_mm"><a href="<?php echo base_url() ?>home/about">About us</a></li>
+          <li class="menu_item menu_mm"><a href="<?php echo base_url() ?>home">Halaman Utama</a></li>
+          <li class="menu_item menu_mm"><a href="<?php echo base_url() ?>home/about">Tentang Kami</a></li>
         </ul>
 
         <!-- Menu Social -->
@@ -130,7 +130,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <a href="<?php echo base_url() ?>home/detail_pantai">
               <div class="top_item_image"><img src="<?php echo base_url() ?>assets/destino/images/top_1.jpg" alt="https://unsplash.com/@sgabriel"></div>
               <div class="top_item_content">
-                <div class="top_item_price">Click for look</div>
+                <div class="top_item_price">Tekan untuk lihat detail</div>
                 <div class="top_item_text">Pantai Ngudel</div>
               </div>
             </a>
@@ -144,7 +144,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <a href="#">
               <div class="top_item_image"><img src="<?php echo base_url() ?>assets/destino/images/top_2.jpg" alt="https://unsplash.com/@jenspeter"></div>
               <div class="top_item_content">
-                <div class="top_item_price">Click for look</div>
+                <div class="top_item_price">Tekan untuk lihat detail</div>
                 <div class="top_item_text">Pantai Tiga Warna</div>
               </div>
             </a>
@@ -158,7 +158,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <a href="#">
               <div class="top_item_image"><img src="<?php echo base_url() ?>assets/destino/images/top_3.jpg" alt="https://unsplash.com/@anikindimitry"></div>
               <div class="top_item_content">
-                <div class="top_item_price">Click for look</div>
+                <div class="top_item_price">Tekan untuk lihat detail</div>
                 <div class="top_item_text">Pantai Goa China</div>
               </div>
             </a>
@@ -172,7 +172,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <a href="#">
               <div class="top_item_image"><img src="<?php echo base_url() ?>assets/destino/images/top_4.jpg" alt="https://unsplash.com/@hellolightbulb"></div>
               <div class="top_item_content">
-                <div class="top_item_price">Click for look</div>
+                <div class="top_item_price">Tekan untuk lihat detail</div>
                 <div class="top_item_text">Pantai Ngantep</div>
               </div>
             </a>  
@@ -185,8 +185,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
   <!-- Last -->
 
-  <div class="last">
-    <!-- Image by https://unsplash.com/@thanni -->
+  <!-- <div class="last">
     <div class="last_background parallax-window" data-parallax="scroll" data-image-src="<?php echo base_url() ?>assets/destino/images/last.jpg" data-speed="0.8"></div>
 
     <div class="container">
@@ -195,7 +194,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div class="col-lg-6 last_col">
           <div class="last_item">
             <div class="last_item_content">
-              <div class="last_subtitle">maldive</div>
+              <div class="last_subtitle">Balekambang</div>
               <div class="last_percent">50%</div>
               <div class="last_title">Last Minute Offer</div>
               <div class="last_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer pulvinar sed mauris eget tincidunt. Sed lectus nulla, tempor vel.</div>
@@ -216,7 +215,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 
   <!-- Special -->
 
@@ -240,8 +239,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="special_item">
               <div class="special_item_background"><img src="<?php echo base_url() ?>assets/destino/images/special_1.jpg" alt="https://unsplash.com/@garciasaldana_"></div>
               <div class="special_item_content text-center">
-                <div class="special_category">Visiting</div>
-                <div class="special_title"><a href="offers.html">Indonesia</a></div>
+                <div class="special_category">Pantai</div>
+                <div class="special_title"><a href="offers.html">Balekambang</a></div>
               </div>
             </div>
           </div>
@@ -251,8 +250,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="special_item d-flex flex-column align-items-center justify-content-center">
               <div class="special_item_background"><img src="<?php echo base_url() ?>assets/destino/images/special_2.jpg" alt="https://unsplash.com/@varshesh"></div>
               <div class="special_item_content text-center">
-                <div class="special_category">Culture</div>
-                <div class="special_title"><a href="offers.html">India</a></div>
+                <div class="special_category">Pantai</div>
+                <div class="special_title"><a href="offers.html">Sendiki</a></div>
               </div>
             </div>
           </div>
@@ -262,8 +261,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="special_item d-flex flex-column align-items-center justify-content-center">
               <div class="special_item_background"><img src="<?php echo base_url() ?>assets/destino/images/special_3.jpg" alt="https://unsplash.com/@paulgilmore_"></div>
               <div class="special_item_content text-center">
-                <div class="special_category">Sunbathing</div>
-                <div class="special_title"><a href="offers.html">Thailand</a></div>
+                <div class="special_category">Pantai</div>
+                <div class="special_title"><a href="offers.html">Bajulmati</a></div>
               </div>
             </div>
           </div>
@@ -273,8 +272,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="special_item d-flex flex-column align-items-center justify-content-center">
               <div class="special_item_background"><img src="<?php echo base_url() ?>assets/destino/images/special_4.jpg" alt="https://unsplash.com/@hellolightbulb"></div>
               <div class="special_item_content text-center">
-                <div class="special_category">Visiting</div>
-                <div class="special_title"><a href="offers.html">Bali</a></div>
+                <div class="special_category">Pantai</div>
+                <div class="special_title"><a href="offers.html">Watuleter</a></div>
               </div>
             </div>
           </div>
@@ -284,8 +283,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="special_item d-flex flex-column align-items-center justify-content-center">
               <div class="special_item_background"><img src="<?php echo base_url() ?>assets/destino/images/special_5.jpg" alt="https://unsplash.com/@dnevozhai"></div>
               <div class="special_item_content text-center">
-                <div class="special_category">Visiting</div>
-                <div class="special_title"><a href="offers.html">France</a></div>
+                <div class="special_category">Pantai</div>
+                <div class="special_title"><a href="offers.html">Sendang Biru</a></div>
               </div>
             </div>
           </div>
