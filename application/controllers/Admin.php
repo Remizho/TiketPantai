@@ -30,7 +30,7 @@ class Admin extends CI_Controller {
 		$this->load->view("templates/v_admin_header");
 		$this->load->view('admin/user_view',$data);
 		$this->load->view("templates/v_admin_footer");
-	}
+	}	
 
 	public function user_create() 
 	{
@@ -101,6 +101,7 @@ class Admin extends CI_Controller {
 	    }
 	}
 
+
 	public function pesanan_edit($id = NULL)
 	{
 
@@ -137,7 +138,6 @@ class Admin extends CI_Controller {
 	        } else {
 		        redirect('admin');
 	        }
-
 	    }
 	}
 
@@ -204,6 +204,84 @@ class Admin extends CI_Controller {
 	{
 		$this->pesanan_model->delete_pesanan($id);
 		redirect('admin/pesanan');
+
+	}
+
+	public function listpantai(){
+		$data['page_title'] = 'Daftar Pantai'; 
+
+		$data['all_listpantai'] = $this->pantai_model->get_all_listpantai();
+
+		$this->load->view("templates/v_admin_header");
+		$this->load->view('admin/listpantai_view',$data);
+		$this->load->view("templates/v_admin_footer");
+	}
+
+	public function listpantai_create() 
+	{
+		// Judul Halaman
+		$data['page_title'] = 'Tambah Pantai';
+
+		// Kita butuh helper dan library berikut
+		$this->load->helper('form');
+		$this->load->library('form_validation');
+
+		$this->form_validation->set_rules(
+			'nama_pantai', 'nama_pantai','is_unique[listpantai.nama_pantai]',
+			array(
+				'is_unique' => 'nama pantai sudah ada'
+			)
+		);
+
+		if($this->form_validation->run() === FALSE){
+			$this->load->view('admin/listpantai_create', $data);
+		} else {
+			$this->pesanan_model->create_listpantai();
+			redirect('admin/listpantai');
+		}
+	}
+
+	public function listpantai_edit($id = NULL)
+	{
+
+		$data['page_title'] = 'UBAH DAFTAR PANTAI';
+
+		// Get artikel dari model berdasarkan $id
+		$data['listpantai'] = $this->pantai_model->get_listpantai_by_id($id);
+		// Jika id kosong atau tidak ada id yg dimaksud, lempar user ke halaman list brand
+		if ( empty($id) || !$data['listpantai'] ) redirect('admin');
+
+		// Kita butuh helper dan library berikut
+	    $this->load->helper('form');
+	    $this->load->library('form_validation');
+
+	    $this->form_validation->set_rules('nama_pantai', 'nama_pantai', 'required');
+	    // Cek apakah input valid atau tidak
+	    if ($this->form_validation->run() === FALSE)
+	    {
+	        $this->load->view('admin/listpantai_edit', $data);
+	    
+	    } else {
+
+	    	$post_data = array(
+	    	    'nama_pantai' => $this->input->post('nama_pantai'),
+	    	    'harga_pantai' => $this->input->post('harga_pantai'),
+	    	    'gambar' => $this->input->post('gambar')
+	    	);
+
+    		// Update kategori sesuai post_data dan id-nya
+	        if ($this->pesanan_model->update_listpantai($post_data, $id)) {
+		        redirect('admin/listpantai');
+	        } else {
+		        redirect('admin');
+	        }
+	    }
+	}
+
+	public function listpantai_delete($id)
+	{
+		$this->pesanan_model->delete_listpantai($id);
+		redirect('admin/listpantai');
 
 	}
 

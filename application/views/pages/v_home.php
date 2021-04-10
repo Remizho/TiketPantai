@@ -237,7 +237,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           <!-- Special Offers Item -->
           <div class="owl-item">
             <div class="special_item">
-              <div class="special_item_background"><img src="<?php echo base_url() ?>assets/destino/images/special_1.jpg" alt="https://unsplash.com/@garciasaldana_"></div>
+              <div class="special_item_background"><img src="<?php echo base_url() ?>assets/destino/images/special_1.jpg" width=""></div>
               <div class="special_item_content text-center">
                 <div class="special_category">Pantai</div>
                 <div class="special_title"><a href="offers.html">Balekambang</a></div>

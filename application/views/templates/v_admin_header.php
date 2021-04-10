@@ -43,7 +43,7 @@
               <a href="<?php echo base_url() ?>admin/user">User</a>
             </li>
             <li>
-              <a href="<?php echo base_url() ?>admin/pantai">List Pantai</a>
+              <a href="<?php echo base_url() ?>admin/listpantai">List Pantai</a>
             </li>           
           </ul>
         </li>

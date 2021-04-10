@@ -1,7 +1,7 @@
 				<footer class="sticky-footer">
 		      <div class="container">
 		        <div class="text-center">
-		          <small>Copyright © WONg 2018</small>
+		          <small>Kelompok 5</small>
 		        </div>
 		      </div>
 		    </footer>
@@ -19,7 +19,7 @@
 		              <span aria-hidden="true">×</span>
 		            </button>
 		          </div>
-		          <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+		          <div class="modal-body">Pilih tombol "Keluar" bila anda sudah selesai.</div>
 		          <div class="modal-footer">
 		            <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
 		            <a class="btn btn-primary" href="<?php echo base_url() ?>user/logout">Keluar</a>
