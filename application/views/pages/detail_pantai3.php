@@ -51,7 +51,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <div class="home_content">
       <div class="home_content_inner">
         <div class="home_text_small" style="font-family: calibri; font-weight: bold; margin-top: 50px;">
-        Detail Pantai <?php echo $pantai->nama_pantai ?>
+        Detail Pantai Goa Cina
         </div>
       </div>
     </div>
@@ -61,13 +61,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <table style="">
           <tr>
             <td>
-              <img src="<?php echo base_url() ?>uploads/<?php echo $pantai->thumbnail ?>" style="width:300px;float:top;">
+              <img src="<?php echo base_url() ?>assets/destino/images/goa.jpg" style="width:300px;float:top;">
             </td>
             <td>
               <p style="font-size: 12px; text-align: justify; margin-left: 10px; ">
-                <?php echo $pantai->deskripsi ?>
-
- 
+              Halo sobat ngalam, salah satu pantai yang cukup sering dikunjungi oleh para wisatawan di daerah malang selatan yaitu Pantai Goa Cina. Pantai yang memiliki nama asli Pantai Rowo Indah Namun sekitar 20 tahun lalu ada kejadian seorang pertapa Cina yang meninggal di dalam goa. Akhirnya masyarakat mengenal pantai tersebut dengan nama Pantai Goa Cina. Tempat wisata pantai ini terletak sejauh 7 km dari Pantai Bajul Mati. Perjalanan jika dihitung dari Pantai Bajul Mati hanya sekitar 15 menit saja. Walau akses menuju tempat wisata ini terbilang mudah, pengunjung harus hati-hati dengan jalanan yang berkelok. Area pantai ini memiliki tiga pulau di dalamnya yaitu Pulau Bantengan, Goa Cina dan Nyonya. Jam buka kawasan wisata ini selama 24 jam karena pengunjung diizinkan berkemah di kawasan pantai. Beberapa pengunjung mengatakan jika pada saat liburan lebaran pantai akan tutup. Biasanya selama 3 hari, kemudian area pantai akan dibuka kembali.
+              <br>
+              Pantai ini terkenal karena masih alami baik itu pemandangannya, maupun air lautnya yang masih jernih. Dengan angin sepoi-sepoi nan sejuk, kamu akan menikmati pemandangan Pantai lengkap dengan suara deburan ombaknya. Pasir Pantai Goa Cina berwarna putih berkilau dan di sepanjang bibir Pantai berbaris pohon cembirit dan ketapang. Selain itu juga ada pemandangan deretan tebing di pinggir Pantai. Di tengah Pantai, terdapat tiga buah batuan karang yang besar dan ditumbuhi rumput yang membuatnya menyerupai pulau, salah satunya pulau Goa Cina
               </p>
             </td>
           </tr>

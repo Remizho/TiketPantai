@@ -75,6 +75,7 @@
                 <?php endif; ?>
 
                 <?php if($this->session->userdata('logged_in')) : ?>
+                  <li class="main_nav_item"><a href="<?php echo base_url() ?>home/pesanan_user">Pesanan Anda</a></li>
                   <li class="main_nav_item"><a href="<?php echo base_url() ?>user/logout">Keluar</a></li>
                 <?php endif; ?>
 

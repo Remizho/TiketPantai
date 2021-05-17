@@ -123,9 +123,26 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       </div>
       <div class="row top_content">
 
-        <div class="col-lg-3 col-md-6 top_col">
+        <?php foreach ($all_favorit as $item) { ?>
+          <div class="col-lg-3 col-md-6 top_col">
 
           <!-- Top Destination Item -->
+          <div class="top_item">
+            <a href="<?php echo base_url() ?>home/detail_pantai/<?php echo $item->id_pantai ?>">
+              <div class="top_item_image"><img src="<?php echo base_url() ?>/uploads/<?php echo $item->thumbnail ?>" alt="<?php echo $item->nama_pantai ?>"></div>
+              <div class="top_item_content">
+                <div class="top_item_price">Tekan untuk lihat detail</div>
+                <div class="top_item_text"><?php echo $item->nama_pantai ?></div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <?php } ?>
+        
+
+        <!-- <div class="col-lg-3 col-md-6 top_col">
+
+          
           <div class="top_item">
             <a href="<?php echo base_url() ?>home/detail_pantai">
               <div class="top_item_image"><img src="<?php echo base_url() ?>assets/destino/images/top_1.jpg" alt="https://unsplash.com/@sgabriel"></div>
@@ -139,9 +156,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
         <div class="col-lg-3 col-md-6 top_col">
 
-          <!-- Top Destination Item -->
+          
           <div class="top_item">
-            <a href="#">
+            <a href="<?php echo base_url() ?>home/detail_pantai2">
               <div class="top_item_image"><img src="<?php echo base_url() ?>assets/destino/images/top_2.jpg" alt="https://unsplash.com/@jenspeter"></div>
               <div class="top_item_content">
                 <div class="top_item_price">Tekan untuk lihat detail</div>
@@ -153,9 +170,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
         <div class="col-lg-3 col-md-6 top_col">
 
-          <!-- Top Destination Item -->
+          
           <div class="top_item">
-            <a href="#">
+            <a href="<?php echo base_url() ?>home/detail_pantai3">
               <div class="top_item_image"><img src="<?php echo base_url() ?>assets/destino/images/top_3.jpg" alt="https://unsplash.com/@anikindimitry"></div>
               <div class="top_item_content">
                 <div class="top_item_price">Tekan untuk lihat detail</div>
@@ -167,9 +184,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
         <div class="col-lg-3 col-md-6 top_col">
 
-          <!-- Top Destination Item -->
+          
           <div class="top_item">
-            <a href="#">
+            <a href="<?php echo base_url() ?>home/detail_pantai4">
               <div class="top_item_image"><img src="<?php echo base_url() ?>assets/destino/images/top_4.jpg" alt="https://unsplash.com/@hellolightbulb"></div>
               <div class="top_item_content">
                 <div class="top_item_price">Tekan untuk lihat detail</div>
@@ -177,7 +194,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               </div>
             </a>  
           </div>
-        </div>
+        </div> -->
 
       </div>
     </div>
@@ -233,61 +250,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <div class="special_content">
       <div class="special_slider_container">
         <div class="owl-carousel owl-theme special_slider">
+
+          <?php foreach ($all_pantai as $item) { ?>
+            <div class="owl-item">
+              <div class="special_item">
+                <div class="special_item_background"><img src="<?php echo base_url() ?>uploads/<?php echo $item->thumbnail ?>" alt="<?php echo $item->nama_pantai ?>"></div>
+                <div class="special_item_content text-center">
+                  <div class="special_category">Pantai</div>
+                  <div class="special_title"><a href="<?php echo base_url() ?>home/detail_pantai/<?php echo $item->id_pantai ?>"><?php echo $item->nama_pantai ?></a></div>
+                </div>
+              </div>
+            </div>
+            
+          <?php } ?>
           
-          <!-- Special Offers Item -->
-          <div class="owl-item">
-            <div class="special_item">
-              <div class="special_item_background"><img src="<?php echo base_url() ?>assets/destino/images/special_1.jpg" width=""></div>
-              <div class="special_item_content text-center">
-                <div class="special_category">Pantai</div>
-                <div class="special_title"><a href="offers.html">Balekambang</a></div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Special Offers Item -->
-          <div class="owl-item">
-            <div class="special_item d-flex flex-column align-items-center justify-content-center">
-              <div class="special_item_background"><img src="<?php echo base_url() ?>assets/destino/images/special_2.jpg" alt="https://unsplash.com/@varshesh"></div>
-              <div class="special_item_content text-center">
-                <div class="special_category">Pantai</div>
-                <div class="special_title"><a href="offers.html">Sendiki</a></div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Special Offers Item -->
-          <div class="owl-item">
-            <div class="special_item d-flex flex-column align-items-center justify-content-center">
-              <div class="special_item_background"><img src="<?php echo base_url() ?>assets/destino/images/special_3.jpg" alt="https://unsplash.com/@paulgilmore_"></div>
-              <div class="special_item_content text-center">
-                <div class="special_category">Pantai</div>
-                <div class="special_title"><a href="offers.html">Bajulmati</a></div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Special Offers Item -->
-          <div class="owl-item">
-            <div class="special_item d-flex flex-column align-items-center justify-content-center">
-              <div class="special_item_background"><img src="<?php echo base_url() ?>assets/destino/images/special_4.jpg" alt="https://unsplash.com/@hellolightbulb"></div>
-              <div class="special_item_content text-center">
-                <div class="special_category">Pantai</div>
-                <div class="special_title"><a href="offers.html">Watuleter</a></div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Special Offers Item -->
-          <div class="owl-item">
-            <div class="special_item d-flex flex-column align-items-center justify-content-center">
-              <div class="special_item_background"><img src="<?php echo base_url() ?>assets/destino/images/special_5.jpg" alt="https://unsplash.com/@dnevozhai"></div>
-              <div class="special_item_content text-center">
-                <div class="special_category">Pantai</div>
-                <div class="special_title"><a href="offers.html">Sendang Biru</a></div>
-              </div>
-            </div>
-          </div>
+          <!--  -->
 
         </div>
 

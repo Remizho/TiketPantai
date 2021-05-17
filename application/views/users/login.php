@@ -19,7 +19,7 @@
               </div>
               <button type="submit" class="button find_button">Masuk</button>
             </form>
-            <br><font style="color: white">belum punya akun? <a href="<?php echo base_url() ?>user/register">Dafatar Disini.</a></font>
+            <br><font style="color: white">belum punya akun? <a href="<?php echo base_url() ?>user/register">Daftar Disini.</a></font>
           </div>
         </div>
       </div>

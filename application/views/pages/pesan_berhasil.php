@@ -61,8 +61,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       <div class="row">
         <div class="col">
           <div class="section_title text-center">
-            <h2>Top destinations in Europe</h2>
-            <div>take a look at these offers</div>
+            <h2>DESTINASI FAVORIT PANTAI NGALAM</h2>
+            <div>temukan pantai idaman anda</div>
           </div>
         </div>
       </div>
@@ -72,11 +72,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
           <!-- Top Destination Item -->
           <div class="top_item">
-            <a href="#">
+            <a href="<?php echo base_url() ?>home/detail_pantai">
               <div class="top_item_image"><img src="<?php echo base_url() ?>assets/destino/images/top_1.jpg" alt="https://unsplash.com/@sgabriel"></div>
               <div class="top_item_content">
-                <div class="top_item_price">From $890</div>
-                <div class="top_item_text">Paris, France</div>
+                <div class="top_item_price">Tekan untuk lihat detail</div>
+                <div class="top_item_text">Pantai Ngudel</div>
               </div>
             </a>
           </div>
@@ -86,11 +86,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
           <!-- Top Destination Item -->
           <div class="top_item">
-            <a href="#">
+            <a href="<?php echo base_url() ?>home/detail_pantai2">
               <div class="top_item_image"><img src="<?php echo base_url() ?>assets/destino/images/top_2.jpg" alt="https://unsplash.com/@jenspeter"></div>
               <div class="top_item_content">
-                <div class="top_item_price">From $890</div>
-                <div class="top_item_text">Italian Riviera</div>
+                <div class="top_item_price">Tekan untuk lihat detail</div>
+                <div class="top_item_text">Pantai Tiga Warna</div>
               </div>
             </a>
           </div>
@@ -100,11 +100,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
           <!-- Top Destination Item -->
           <div class="top_item">
-            <a href="#">
+            <a href="<?php echo base_url() ?>home/detail_pantai3">
               <div class="top_item_image"><img src="<?php echo base_url() ?>assets/destino/images/top_3.jpg" alt="https://unsplash.com/@anikindimitry"></div>
               <div class="top_item_content">
-                <div class="top_item_price">From $890</div>
-                <div class="top_item_text">Cinque Terre</div>
+                <div class="top_item_price">Tekan untuk lihat detail</div>
+                <div class="top_item_text">Pantai Goa China</div>
               </div>
             </a>
           </div>
@@ -114,11 +114,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
           <!-- Top Destination Item -->
           <div class="top_item">
-            <a href="#">
+            <a href="<?php echo base_url() ?>home/detail_pantai4">
               <div class="top_item_image"><img src="<?php echo base_url() ?>assets/destino/images/top_4.jpg" alt="https://unsplash.com/@hellolightbulb"></div>
               <div class="top_item_content">
-                <div class="top_item_price">From $890</div>
-                <div class="top_item_text">Santorini, Greece</div>
+                <div class="top_item_price">Tekan untuk lihat detail</div>
+                <div class="top_item_text">Pantai Ngantep</div>
               </div>
             </a>  
           </div>
@@ -130,38 +130,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
   <!-- Last -->
 
-  <div class="last">
-    <!-- Image by https://unsplash.com/@thanni -->
-    <div class="last_background parallax-window" data-parallax="scroll" data-image-src="<?php echo base_url() ?>assets/destino/images/last.jpg" data-speed="0.8"></div>
-
-    <div class="container">
-      <div class="row">
-        <div class="last_logo"><img src="<?php echo base_url() ?>assets/destino/images/last_logo.png" alt=""></div>
-        <div class="col-lg-6 last_col">
-          <div class="last_item">
-            <div class="last_item_content">
-              <div class="last_subtitle">maldive</div>
-              <div class="last_percent">50%</div>
-              <div class="last_title">Last Minute Offer</div>
-              <div class="last_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer pulvinar sed mauris eget tincidunt. Sed lectus nulla, tempor vel.</div>
-              <div class="button last_button"><a href="offers.html">See Offer</a></div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-6 last_col">
-          <div class="last_item">
-            <div class="last_item_content">
-              <div class="last_subtitle">bali</div>
-              <div class="last_percent">38%</div>
-              <div class="last_title">Last Minute Offer</div>
-              <div class="last_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer pulvinar sed mauris eget tincidunt. Sed lectus nulla, tempor vel.</div>
-              <div class="button last_button"><a href="offers.html">See Offer</a></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  
 
   <!-- Special -->
 
@@ -170,8 +139,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       <div class="row">
         <div class="col">
           <div class="section_title text-center">
-            <h2>Special offers</h2>
-            <div>take a look at these offers</div>
+            <h2>PROMO ANDA</h2>
+            <div>jangan sampai terlewat</div>
           </div>
         </div>
       </div>
@@ -185,8 +154,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="special_item">
               <div class="special_item_background"><img src="<?php echo base_url() ?>assets/destino/images/special_1.jpg" alt="https://unsplash.com/@garciasaldana_"></div>
               <div class="special_item_content text-center">
-                <div class="special_category">Visiting</div>
-                <div class="special_title"><a href="offers.html">Indonesia</a></div>
+                <div class="special_category">Pantai</div>
+                <div class="special_title"><a href="offers.html">Balekambang</a></div>
               </div>
             </div>
           </div>
@@ -196,8 +165,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="special_item d-flex flex-column align-items-center justify-content-center">
               <div class="special_item_background"><img src="<?php echo base_url() ?>assets/destino/images/special_2.jpg" alt="https://unsplash.com/@varshesh"></div>
               <div class="special_item_content text-center">
-                <div class="special_category">Culture</div>
-                <div class="special_title"><a href="offers.html">India</a></div>
+                <div class="special_category">Pantai</div>
+                <div class="special_title"><a href="offers.html">Sendiki</a></div>
               </div>
             </div>
           </div>
@@ -207,8 +176,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="special_item d-flex flex-column align-items-center justify-content-center">
               <div class="special_item_background"><img src="<?php echo base_url() ?>assets/destino/images/special_3.jpg" alt="https://unsplash.com/@paulgilmore_"></div>
               <div class="special_item_content text-center">
-                <div class="special_category">Sunbathing</div>
-                <div class="special_title"><a href="offers.html">Thailand</a></div>
+                <div class="special_category">Pantai</div>
+                <div class="special_title"><a href="offers.html">Bajulmati</a></div>
               </div>
             </div>
           </div>
@@ -218,8 +187,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="special_item d-flex flex-column align-items-center justify-content-center">
               <div class="special_item_background"><img src="<?php echo base_url() ?>assets/destino/images/special_4.jpg" alt="https://unsplash.com/@hellolightbulb"></div>
               <div class="special_item_content text-center">
-                <div class="special_category">Visiting</div>
-                <div class="special_title"><a href="offers.html">Bali</a></div>
+                <div class="special_category">Pantai</div>
+                <div class="special_title"><a href="offers.html">Watuleter</a></div>
               </div>
             </div>
           </div>
@@ -229,8 +198,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="special_item d-flex flex-column align-items-center justify-content-center">
               <div class="special_item_background"><img src="<?php echo base_url() ?>assets/destino/images/special_5.jpg" alt="https://unsplash.com/@dnevozhai"></div>
               <div class="special_item_content text-center">
-                <div class="special_category">Visiting</div>
-                <div class="special_title"><a href="offers.html">France</a></div>
+                <div class="special_category">Pantai</div>
+                <div class="special_title"><a href="offers.html">Sendang Biru</a></div>
               </div>
             </div>
           </div>
@@ -246,24 +215,4 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
   <!-- Newsletter -->
 
-  <div class="newsletter">
-    <!-- Image by https://unsplash.com/@garciasaldana_ -->
-    <div class="newsletter_background" style="background-image:url(<?php echo base_url() ?>assets/destino/images/newsletter.jpg)"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-10 offset-lg-1">
-          <div class="newsletter_content">
-            <div class="newsletter_title text-center">Subscribe to our Newsletter</div>
-            <div class="newsletter_form_container">
-              <form action="#" id="newsletter_form" class="newsletter_form">
-                <div class="d-flex flex-md-row flex-column align-content-center justify-content-between">
-                  <input type="email" id="newsletter_input" class="newsletter_input" placeholder="Your E-mail Address">
-                  <button type="submit" id="newsletter_button" class="newsletter_button">Subscribe</button>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <

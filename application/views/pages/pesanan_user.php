@@ -51,49 +51,63 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <div class="home_content">
       <div class="home_content_inner">
         <div class="home_text_small" style="font-family: calibri; font-weight: bold; margin-top: 50px;">
-        Detail Pantai <?php echo $pantai->nama_pantai ?>
+        Detail Pantai Ngudel
         </div>
       </div>
     </div>
   </div>
 
   <div style="margin-left: 40px;margin-right: 40px;margin-top: 50px;margin-bottom: 50px;">
-        <table style="">
-          <tr>
-            <td>
-              <img src="<?php echo base_url() ?>uploads/<?php echo $pantai->thumbnail ?>" style="width:300px;float:top;">
-            </td>
-            <td>
-              <p style="font-size: 12px; text-align: justify; margin-left: 10px; ">
-                <?php echo $pantai->deskripsi ?>
+    <center>
+      Transfer ke atm BNI 000-0000-000  untuk menyelesaikan pembayaran anda dan status akan berubah setelah diverifikasi admin
+      <br><br>
+      <table border="1">
+        <tr>
+          <th>
+            Kode Booking
+          </th>
+          <th>
+            Atas nama
+          </th>
+          <th>
+            Nama Pantai
+          </th>
+          <th>
+            Harga
+          </th>
+          <th>
+            Tanggal kunjung
+          </th>
+          <th>
+            Status Pesanan
+          </th>
+        </tr>
+        <?php
+          foreach ($all_pesanan as $key) :
+            if($key->fk_id_user == $this->session->userdata('user_id')){
+        ?>
+        <tr>
+          <td>
+            <?php echo $key->kode ?>
+          </td>
+          <td>
+            <?php echo $key->nama ?>
+          </td>
+          <td>
+            <?php echo $key->nama_pantai ?>
+          </td>
+          <td>
+            <?php echo $key->harga_pantai ?>
+          </td>
+          <td>
+            <?php echo $key->tggl ?>
+          </td>
+          <td>
+            <?php echo $key->bayar ?> bayar
+          </td>
+        </tr>
+        <?php } endforeach; ?>
 
- 
-              </p>
-            </td>
-          </tr>
-
-          <tr>
-            <td colspan="2">
-              <font id="no">0</font><!--  <button id="likeShow"> Like</button> <button id="likeHide"> unLike</button> -->
-              <img src="<?php echo base_url() ?>assets/destino/images/like.png" id="likeShow" style="width: 15px">
-              <img src="<?php echo base_url() ?>assets/destino/images/unlike.png" id="likeHide" style="width: 15px">
-            </td>
-          </tr>
-          <tr>
-            <td colspan="2">
-              <!-- <textarea  cols=50 rows=2 placeholder="komentar"></textarea> -->
-              <!-- <form> -->
-              <!-- Nama Anda :</br>
-              <input type=text name="text" id="teks" size="35"><br /><br>  -->
-              Komentar :</br>
-              <textarea rows="2" name="b" id="kepala" cols="35" wrap="virtual"></textarea><br /><br>
-              <input type="button" id="kirim1" value="Komentar" />
-              <input name="Clear" type="reset" value="Batal" />
-              <!-- </form><br /> -->
-              <hr style="border: 1px dashed black;"></hr>
-              <p id="isi">
-              </p>
-            </td>
-          </tr>
-        </table>
+      </table>
+    </center>
   </div>

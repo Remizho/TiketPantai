@@ -12,6 +12,7 @@ class Admin extends CI_Controller {
 		$this->load->helper('MY');
 		$this->load->model('user_model');
 		$this->load->model('pesanan_model');
+		$this->load->model('pantai_model');
 	}
 
 	public function index()
@@ -49,7 +50,9 @@ class Admin extends CI_Controller {
 		);
 
 		if($this->form_validation->run() === FALSE){
+			$this->load->view("templates/v_admin_header");
 			$this->load->view('admin/user_create',$data);
+			$this->load->view("templates/v_admin_footer");
 		} else {
 			$this->user_model->create_user();
 			redirect('admin/user');
@@ -80,7 +83,9 @@ class Admin extends CI_Controller {
 	    // Cek apakah input valid atau tidak
 	    if ($this->form_validation->run() === FALSE)
 	    {
+			$this->load->view("templates/v_admin_header");
 	        $this->load->view('admin/user_edit', $data);
+			$this->load->view("templates/v_admin_footer");
 	    
 	    } else {
 
@@ -102,34 +107,15 @@ class Admin extends CI_Controller {
 	}
 
 
-	public function pesanan_edit($id = NULL)
+	public function selesaikan_pembayaran($id)
 	{
-
-		$data['page_title'] = 'PESANAN EDIT';
-
-		// Get artikel dari model berdasarkan $id
-		$data['pesanan'] = $this->pesanan_model->get_pesanan_by_id($id);
-		// Jika id kosong atau tidak ada id yg dimaksud, lempar user ke halaman list brand
-		if ( empty($id) || !$data['pesanan'] ) redirect('admin');
-
-		// Kita butuh helper dan library berikut
-	    $this->load->helper('form');
-	    $this->load->library('form_validation');
-
-	    $this->form_validation->set_rules('nama_penum', 'nama_penum', 'required');
-	    // Cek apakah input valid atau tidak
-	    if ($this->form_validation->run() === FALSE)
-	    {
-	        $this->load->view('admin/pesanan_edit', $data);
-	    
-	    } else {
-
 	    	$post_data = array(
-	    	    'nama_penum' => $this->input->post('nama_penum'),
-	    	    'no_penum' => $this->input->post('no_penum'),
-	    	    'asal_penum' => $this->input->post('asal_penum'),
-	    	    'tujuan_penum' => $this->input->post('tujuan_penum'),
-	    	    'tggl_penum' => $this->input->post('tggl_penum')
+	    	    // 'nama_penum' => $this->input->post('nama_penum'),
+	    	    // 'no_penum' => $this->input->post('no_penum'),
+	    	    // 'asal_penum' => $this->input->post('asal_penum'),
+	    	    // 'tujuan_penum' => $this->input->post('tujuan_penum'),
+	    	    // 'tggl_penum' => $this->input->post('tggl_penum')
+	    	    'bayar' => 'sudah',
 	    	);
 
     		// Update kategori sesuai post_data dan id-nya
@@ -138,7 +124,24 @@ class Admin extends CI_Controller {
 	        } else {
 		        redirect('admin');
 	        }
-	    }
+	}
+	public function batalkan_pembayaran($id)
+	{
+	    	$post_data = array(
+	    	    // 'nama_penum' => $this->input->post('nama_penum'),
+	    	    // 'no_penum' => $this->input->post('no_penum'),
+	    	    // 'asal_penum' => $this->input->post('asal_penum'),
+	    	    // 'tujuan_penum' => $this->input->post('tujuan_penum'),
+	    	    // 'tggl_penum' => $this->input->post('tggl_penum')
+	    	    'bayar' => 'belum',
+	    	);
+
+    		// Update kategori sesuai post_data dan id-nya
+	        if ($this->pesanan_model->update_pesanan($post_data, $id)) {
+		        redirect('admin/pesanan');
+	        } else {
+		        redirect('admin');
+	        }
 	}
 
 	public function pesanan(){
@@ -184,12 +187,9 @@ class Admin extends CI_Controller {
 		$this->load->helper('form');
 		$this->load->library('form_validation');
 
-		$this->form_validation->set_rules(
-			'no_penum', 'no_penum','is_unique[pesanan.no_penum]',
-			array(
-				'is_unique' => 'nopenumpang sudah ada.'
-			)
-		);
+		$this->form_validation->set_rules('nama', 'nama', 'required',
+			array('required' => 'Isi %s donk.'));
+		
 
 		if($this->form_validation->run() === FALSE){
 			$this->load->view('admin/pesanan_create', $data);
@@ -210,7 +210,7 @@ class Admin extends CI_Controller {
 	public function listpantai(){
 		$data['page_title'] = 'Daftar Pantai'; 
 
-		$data['all_listpantai'] = $this->pantai_model->get_all_listpantai();
+		$data['all_listpantai'] = $this->pantai_model->get_all_pantai();
 
 		$this->load->view("templates/v_admin_header");
 		$this->load->view('admin/listpantai_view',$data);
@@ -227,18 +227,82 @@ class Admin extends CI_Controller {
 		$this->load->library('form_validation');
 
 		$this->form_validation->set_rules(
-			'nama_pantai', 'nama_pantai','is_unique[listpantai.nama_pantai]',
+			'nama_pantai', 'nama_pantai','is_unique[pantai.nama_pantai]',
 			array(
 				'is_unique' => 'nama pantai sudah ada'
 			)
 		);
 
-		if($this->form_validation->run() === FALSE){
+	    // Cek apakah input valid atau tidak
+	    if ($this->form_validation->run() === FALSE)
+	    {
+			$this->load->view("templates/v_admin_header");
 			$this->load->view('admin/listpantai_create', $data);
-		} else {
-			$this->pesanan_model->create_listpantai();
-			redirect('admin/listpantai');
-		}
+			$this->load->view("templates/v_admin_footer");
+
+	    } else {
+
+    		// Apakah user upload gambar?
+    		if ( isset($_FILES['thumbnail']) && $_FILES['thumbnail']['size'] > 0 )
+    		{
+    			// Konfigurasi folder upload & file yang diijinkan
+    			// Jangan lupa buat folder uploads di dalam ci3-course
+    			$config['upload_path']          = './uploads/';
+    	        $config['allowed_types']        = 'gif|jpg|png';
+    	        $config['max_size']             = 1500;
+    	        $config['max_width']            = 2024;
+    	        $config['max_height']           = 1500;
+
+    	        // Load library upload
+    	        $this->load->library('upload', $config);
+
+    	        // Apakah file berhasil diupload?
+    	        if ( ! $this->upload->do_upload('thumbnail'))
+    	        {
+    	        	$data['upload_error'] = $this->upload->display_errors();
+
+    	        	$post_image = '';
+
+    	        	// Kita passing pesan error upload ke view supaya user mencoba upload ulang
+					$this->load->view("templates/v_admin_header");
+					$this->load->view('admin/listpantai_create', $data);
+					$this->load->view("templates/v_admin_footer");
+
+    	        } else {
+
+    	        	// Simpan nama file-nya jika berhasil diupload
+    	            $img_data = $this->upload->data();
+    	            $post_image = $img_data['file_name'];
+    	        	
+    	        }
+    		} else {
+
+    			// User tidak upload gambar, jadi kita kosongkan field ini
+    			$post_image = '';
+    		}
+
+	    	// Memformat slug sebagai alamat URL, 
+	    	// Misal judul: "Hello World", kita format menjadi "hello-world"
+	    	// Nantinya, URL blog kita menjadi mudah dibaca \
+
+	    	$value = $this->input->post('pantai_favorit');
+			$checked = ($value === FALSE) ? 0 : 1;
+
+	    	$post_data = array(
+				'nama_pantai'          => $this->input->post('nama_pantai'),
+                'harga_pantai'          => $this->input->post('harga_pantai'),
+                'deskripsi'          => $this->input->post('deskripsi'),
+                'thumbnail'          	=> $post_image,
+                'pantai_favorit'		=> $checked
+	    	);
+
+	    	// Jika tidak ada error upload gambar, maka kita insert ke database via model Blog 
+	    	if( empty($data['upload_error']) ) {
+		        $this->pantai_model->create_pantai($post_data);
+
+				redirect('admin/listpantai');
+	    	}
+	    }
 	}
 
 	public function listpantai_edit($id = NULL)
@@ -247,7 +311,7 @@ class Admin extends CI_Controller {
 		$data['page_title'] = 'UBAH DAFTAR PANTAI';
 
 		// Get artikel dari model berdasarkan $id
-		$data['listpantai'] = $this->pantai_model->get_listpantai_by_id($id);
+		$data['listpantai'] = $this->pantai_model->get_pantai_by_id($id);
 		// Jika id kosong atau tidak ada id yg dimaksud, lempar user ke halaman list brand
 		if ( empty($id) || !$data['listpantai'] ) redirect('admin');
 
@@ -255,22 +319,28 @@ class Admin extends CI_Controller {
 	    $this->load->helper('form');
 	    $this->load->library('form_validation');
 
-	    $this->form_validation->set_rules('nama_pantai', 'nama_pantai', 'required');
+	    $this->form_validation->set_rules('harga_pantai', 'harga_pantai', 'required');
 	    // Cek apakah input valid atau tidak
 	    if ($this->form_validation->run() === FALSE)
 	    {
+			$this->load->view("templates/v_admin_header");
 	        $this->load->view('admin/listpantai_edit', $data);
+			$this->load->view("templates/v_admin_footer");
 	    
 	    } else {
 
+	    	$value = $this->input->post('pantai_favorit');
+			$checked = ($value === FALSE) ? 0 : 1;
+
 	    	$post_data = array(
-	    	    'nama_pantai' => $this->input->post('nama_pantai'),
+	    	    // 'nama_pantai' => $this->input->post('nama_pantai'),
 	    	    'harga_pantai' => $this->input->post('harga_pantai'),
-	    	    'gambar' => $this->input->post('gambar')
+	    	    'pantai_favorit' => $checked,
+	    	    // 'gambar' => $this->input->post('gambar')
 	    	);
 
     		// Update kategori sesuai post_data dan id-nya
-	        if ($this->pesanan_model->update_listpantai($post_data, $id)) {
+	        if ($this->pantai_model->update_pantai($post_data, $id)) {
 		        redirect('admin/listpantai');
 	        } else {
 		        redirect('admin');
@@ -280,7 +350,7 @@ class Admin extends CI_Controller {
 
 	public function listpantai_delete($id)
 	{
-		$this->pesanan_model->delete_listpantai($id);
+		$this->pantai_model->delete_pantai($id);
 		redirect('admin/listpantai');
 
 	}

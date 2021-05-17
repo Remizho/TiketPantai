@@ -33,11 +33,11 @@
               </div><br>
               <div class="" style="width: 356px;">
                 <div style="color: white">Password:</div>
-                <input type="text" class="destination find_input"  name="password" required="required" placeholder="Keyword here">
+                <input type="password" class="destination find_input"  name="password" required="required" placeholder="Keyword here">
               </div><br>
               <div class="" style="width: 356px;">
                 <div style="color: white">Konfirmasi Password:</div>
-                <input type="text" class="destination find_input"  name="password2" required="required" placeholder="Keyword here">
+                <input type="password" class="destination find_input"  name="password2" required="required" placeholder="Keyword here">
               </div><br>
               <div class="find_item">
                 <div><br>Anda menyetujui persyaratan :</div>

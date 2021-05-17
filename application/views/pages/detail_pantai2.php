@@ -51,7 +51,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <div class="home_content">
       <div class="home_content_inner">
         <div class="home_text_small" style="font-family: calibri; font-weight: bold; margin-top: 50px;">
-        Detail Pantai <?php echo $pantai->nama_pantai ?>
+        Detail Pantai Tiga Warna
         </div>
       </div>
     </div>
@@ -61,13 +61,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <table style="">
           <tr>
             <td>
-              <img src="<?php echo base_url() ?>uploads/<?php echo $pantai->thumbnail ?>" style="width:300px;float:top;">
+              <img src="<?php echo base_url() ?>assets/destino/images/ptw.jpg" style="width:300px;float:top;">
             </td>
             <td>
               <p style="font-size: 12px; text-align: justify; margin-left: 10px; ">
-                <?php echo $pantai->deskripsi ?>
-
- 
+              Halo sobat ngalam, Malang memiliki pilihan wisata pantai yang beragam dan menarik, salah satunya adalah Pantai Tiga Warna. Selain tempat wisata, pantai yang dibuka pada pertengahan 2014 ini merupakan kawasan rehabilitasi dan konservasi mangrove, terumbu karang, dan hutan lindung. Pantai Tiga Warna sudah mulai menjadi Wisata terkenal dan favorit para Wisatawan. ni tidak lepas dari keunikan Pantai ini. Sesuai dengan namanya, Pantai Tiga Warna memiliki 3 warna air yang berbeda sesuai dengan kedalamannya. Pantai ini memilki 3 warna yaitu warna merah, hijau dan Biru. Pantai Tiga Warna sudah dikelola dengan baik dan anda harus membeli tiket masuk terlebih dahulu jika ingin masuk dan menikmati keindahan alamnya. Tidak perlu mahal-mahal, Anda hanya perlu membayar sebesar Rp 10.000 saja untuk satu orang.
+              <br>
+              Pantai Tiga Warna berlokasi di Desa Tambak Rejo, tepatnya di wilayah konservasi Sendangbiru, Kabupaten Malang Jawa Timur. Untuk masuk ke kawasan Pantai ini harus mendapatkan izin Clungup Mangrove Coservation, karena Pantai ini terletak di dalam wilayah konservasi.Para wisatawan yang datang akan dibatasi jumlahnya. Ini dilakukan untuk menjaga kebersihan pantai. Di Pantai ini para pengunjung bisa berenang. Bahkan juga bisa melakukan snorkeling untuk melihat pemandangan bawah laut dengan terumbu karang.
               </p>
             </td>
           </tr>

@@ -58,14 +58,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <?php endif; ?>
 
                 <?php if($this->session->userdata('logged_in')) : ?>
-                  <div class="home_text_small">Selamat datang <?php echo $user->nama ?> <span class="badge badge-secondary"><?php echo $user->nama_level ?></span></div>
+                  <div class="home_text_small">Selamat datang <?php echo $user->nama ?></div>
                 <?php endif; ?>
       </div>
     </div>
   </div>
 
   <!-- Find Form -->
-<br><br><br><br><br><br><br><br><br>
+<br><br>
   <div class="find">
     <!-- Image by https://unsplash.com/@garciasaldana_ -->
     <div class="find_background parallax-window" data-parallax="scroll" data-image-src="<?php echo base_url() ?>assets/destino/images/find.jpg" data-speed="0.8"></div>
@@ -85,31 +85,28 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           <?php echo (isset( $upload_error)) ? '<div class="alert alert-warning" role="alert">' .$upload_error. '</div>' : ''; ?>
           <?php echo form_open_multipart( 'admin/pesanan_create2', array('class' => 'needs-validation', 'novalidate' => '') ); ?>
               <div class="find_item">
-                <div>Name:</div>
-                <input type="text" class="destination find_input" name="nama_penum"  required="required">
+                <div>Nama:</div>
+                <input type="text" class="destination find_input" name="nama" style="background-color: white;color: black;"  required="required">
               </div>
               <div class="find_item">
-                <div>Date:</div>
-                <input type="date" class="destination find_input"name="tggl_penum" required="required">
-              </div>
-              <div class="" style="width: 356px;">
-                <div style="color: white">Asal:</div>
-                <input type="text" class="destination find_input"  name="asal_penum" required="required">
+                <div>Tanggal:</div>
+                <input type="date" class="destination find_input" name="tggl" style="background-color: white;color: black;" required="required">
               </div>
               <div class="" style="width: 356px;">
                 <div style="color: white">Tujuan:</div>
-                <select class="destination find_input" required="required">
+                <!-- <select class="destination find_input" required="required">
                   <option value="">Pilih Disini</option>
                   <option value="cina">Pantai Goa China</option>
                   <option value="ngantep">Pantai Ngantep</option>
                   <option value="ngliyep">Pantai Ngliyep</option>
                   <option value="sendiki">Pantai Sendiki</option>
-                </select>
+                </select> -->
+                <?php echo form_dropdown('id_pantai', $pantai, 'class="destination find_input"' ); ?>
                 <!-- <input type="text" class="destination find_input"  name="tujuan_penum" required="required" placeholder="Keyword here"> -->
               </div>
               <div class="" style="width: 356px;">
                 <div style="color: white">Jumlah Pengunjung</div>
-                <input type="number" min="0" class="destination find_input" name="no_penum" required="required">
+                <input type="number" min="0" style="background-color: white;color: black;" class="destination find_input" name="jumlah" required="required">
               </div>
               <button type="submit" class="button find_button">Pesan</button>
             </form>
@@ -133,25 +130,29 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       </div>
       <div class="row top_content">
 
-        <div class="col-lg-3 col-md-6 top_col">
+
+        <?php foreach ($all_favorit as $item) { ?>
+          <div class="col-lg-3 col-md-6 top_col">
 
           <!-- Top Destination Item -->
           <div class="top_item">
-            <a href="<?php echo base_url() ?>home/detail_pantai">
-              <div class="top_item_image"><img src="<?php echo base_url() ?>assets/destino/images/top_1.jpg" alt="https://unsplash.com/@sgabriel"></div>
+            <a href="<?php echo base_url() ?>home/detail_pantai/<?php echo $item->id_pantai ?>">
+              <div class="top_item_image"><img src="<?php echo base_url() ?>/uploads/<?php echo $item->thumbnail ?>" alt="<?php echo $item->nama_pantai ?>"></div>
               <div class="top_item_content">
                 <div class="top_item_price">Tekan untuk lihat detail</div>
-                <div class="top_item_text">Pantai Ngudel</div>
+                <div class="top_item_text"><?php echo $item->nama_pantai ?></div>
               </div>
             </a>
           </div>
         </div>
+        <?php } ?>
+        
 
-        <div class="col-lg-3 col-md-6 top_col">
+        <!-- <div class="col-lg-3 col-md-6 top_col">
 
-          <!-- Top Destination Item -->
+          Top Destination Item
           <div class="top_item">
-            <a href="#">
+            <a href="<?php echo base_url() ?>home/detail_pantai2">
               <div class="top_item_image"><img src="<?php echo base_url() ?>assets/destino/images/top_2.jpg" alt="https://unsplash.com/@jenspeter"></div>
               <div class="top_item_content">
                 <div class="top_item_price">Tekan untuk lihat detail</div>
@@ -163,9 +164,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
         <div class="col-lg-3 col-md-6 top_col">
 
-          <!-- Top Destination Item -->
+          Top Destination Item
           <div class="top_item">
-            <a href="#">
+            <a href="<?php echo base_url() ?>home/detail_pantai3">
               <div class="top_item_image"><img src="<?php echo base_url() ?>assets/destino/images/top_3.jpg" alt="https://unsplash.com/@anikindimitry"></div>
               <div class="top_item_content">
                 <div class="top_item_price">Tekan untuk lihat detail</div>
@@ -177,9 +178,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
         <div class="col-lg-3 col-md-6 top_col">
 
-          <!-- Top Destination Item -->
+          Top Destination Item 
           <div class="top_item">
-            <a href="#">
+            <a href="<?php echo base_url() ?>home/detail_pantai4">
               <div class="top_item_image"><img src="<?php echo base_url() ?>assets/destino/images/top_4.jpg" alt="https://unsplash.com/@hellolightbulb"></div>
               <div class="top_item_content">
                 <div class="top_item_price">Tekan untuk lihat detail</div>
@@ -187,7 +188,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               </div>
             </a>  
           </div>
-        </div>
+        </div> -->
 
       </div>
     </div>
@@ -243,19 +244,24 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <div class="special_content">
       <div class="special_slider_container">
         <div class="owl-carousel owl-theme special_slider">
-          
-          <!-- Special Offers Item -->
-          <div class="owl-item">
-            <div class="special_item">
-              <div class="special_item_background"><img src="<?php echo base_url() ?>assets/destino/images/special_1.jpg" alt="https://unsplash.com/@garciasaldana_"></div>
-              <div class="special_item_content text-center">
-                <div class="special_category">Pantai</div>
-                <div class="special_title"><a href="offers.html">Balekambang</a></div>
+
+
+          <?php foreach ($all_pantai as $item) { ?>
+            <div class="owl-item">
+              <div class="special_item">
+                <div class="special_item_background"><img src="<?php echo base_url() ?>uploads/<?php echo $item->thumbnail ?>" alt="<?php echo $item->nama_pantai ?>"></div>
+                <div class="special_item_content text-center">
+                  <div class="special_category">Pantai</div>
+                  <div class="special_title"><a href="offers.html"><?php echo $item->nama_pantai ?></a></div>
+                </div>
               </div>
             </div>
-          </div>
+            
+          <?php } ?>
+          
+          
 
-          <!-- Special Offers Item -->
+          <!-- 
           <div class="owl-item">
             <div class="special_item d-flex flex-column align-items-center justify-content-center">
               <div class="special_item_background"><img src="<?php echo base_url() ?>assets/destino/images/special_2.jpg" alt="https://unsplash.com/@varshesh"></div>
@@ -266,7 +272,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
           </div>
 
-          <!-- Special Offers Item -->
+          
           <div class="owl-item">
             <div class="special_item d-flex flex-column align-items-center justify-content-center">
               <div class="special_item_background"><img src="<?php echo base_url() ?>assets/destino/images/special_3.jpg" alt="https://unsplash.com/@paulgilmore_"></div>
@@ -277,7 +283,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
           </div>
 
-          <!-- Special Offers Item -->
+          
           <div class="owl-item">
             <div class="special_item d-flex flex-column align-items-center justify-content-center">
               <div class="special_item_background"><img src="<?php echo base_url() ?>assets/destino/images/special_4.jpg" alt="https://unsplash.com/@hellolightbulb"></div>
@@ -288,7 +294,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
           </div>
 
-          <!-- Special Offers Item -->
+          
           <div class="owl-item">
             <div class="special_item d-flex flex-column align-items-center justify-content-center">
               <div class="special_item_background"><img src="<?php echo base_url() ?>assets/destino/images/special_5.jpg" alt="https://unsplash.com/@dnevozhai"></div>
@@ -297,7 +303,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <div class="special_title"><a href="offers.html">Sendang Biru</a></div>
               </div>
             </div>
-          </div>
+          </div> -->
 
         </div>
 

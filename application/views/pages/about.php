@@ -56,6 +56,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </div>
   </div>
 
+  <div style="margin-left: 40px;margin-right: 40px;margin-top: 50px;margin-bottom: 50px;">
+    <center>
+      <p>
+        Ini adalah website penyedia layanan e-ticketing untuk pantai di malang selatan.
+      </p>
+    </center>
+  </div>
+
   <!-- Special -->
 
   <div class="special">
@@ -73,60 +81,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       <div class="special_slider_container">
         <div class="owl-carousel owl-theme special_slider">
           
-          <!-- Special Offers Item -->
-          <div class="owl-item">
-            <div class="special_item">
-              <div class="special_item_background"><img src="<?php echo base_url() ?>assets/destino/images/special_1.jpg" alt="https://unsplash.com/@garciasaldana_"></div>
-              <div class="special_item_content text-center">
-                <div class="special_category">Pantai</div>
-                <div class="special_title"><a href="offers.html">Balekambang</a></div>
+          
+          <?php foreach ($all_pantai as $item) { ?>
+            <div class="owl-item">
+              <div class="special_item">
+                <div class="special_item_background"><img src="<?php echo base_url() ?>uploads/<?php echo $item->thumbnail ?>" alt="<?php echo $item->nama_pantai ?>"></div>
+                <div class="special_item_content text-center">
+                  <div class="special_category">Pantai</div>
+                  <div class="special_title"><a href="offers.html"><?php echo $item->nama_pantai ?></a></div>
+                </div>
               </div>
             </div>
-          </div>
-
-          <!-- Special Offers Item -->
-          <div class="owl-item">
-            <div class="special_item d-flex flex-column align-items-center justify-content-center">
-              <div class="special_item_background"><img src="<?php echo base_url() ?>assets/destino/images/special_2.jpg" alt="https://unsplash.com/@varshesh"></div>
-              <div class="special_item_content text-center">
-                <div class="special_category">Pantai</div>
-                <div class="special_title"><a href="offers.html">Sendiki</a></div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Special Offers Item -->
-          <div class="owl-item">
-            <div class="special_item d-flex flex-column align-items-center justify-content-center">
-              <div class="special_item_background"><img src="<?php echo base_url() ?>assets/destino/images/special_3.jpg" alt="https://unsplash.com/@paulgilmore_"></div>
-              <div class="special_item_content text-center">
-                <div class="special_category">Pantai</div>
-                <div class="special_title"><a href="offers.html">Bajulmati</a></div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Special Offers Item -->
-          <div class="owl-item">
-            <div class="special_item d-flex flex-column align-items-center justify-content-center">
-              <div class="special_item_background"><img src="<?php echo base_url() ?>assets/destino/images/special_4.jpg" alt="https://unsplash.com/@hellolightbulb"></div>
-              <div class="special_item_content text-center">
-                <div class="special_category">Pantai</div>
-                <div class="special_title"><a href="offers.html">Watuleter</a></div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Special Offers Item -->
-          <div class="owl-item">
-            <div class="special_item d-flex flex-column align-items-center justify-content-center">
-              <div class="special_item_background"><img src="<?php echo base_url() ?>assets/destino/images/special_5.jpg" alt="https://unsplash.com/@dnevozhai"></div>
-              <div class="special_item_content text-center">
-                <div class="special_category">Pantai</div>
-                <div class="special_title"><a href="offers.html">Sendang Biru</a></div>
-              </div>
-            </div>
-          </div>
+            
+          <?php } ?>
 
         </div>
 

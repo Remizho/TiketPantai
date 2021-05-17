@@ -21,7 +21,7 @@ class User_model extends CI_Model
     public function create_user()
     {
         $data = array(
-                'level'        => $this->input->post('level'),
+                'fk_level_id'        => $this->input->post('level'),
                 'nama'          => $this->input->post('nama'),
                 'email'          => $this->input->post('email'),
                 'username'          => $this->input->post('username'),

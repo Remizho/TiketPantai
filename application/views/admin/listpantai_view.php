@@ -22,6 +22,7 @@
                   <th>Nama_Pantai</th>
                   <th>Harga_Pantai</th>
                   <th>Gambar</th>
+                  <th>Aksi</th>
                 </tr>
               </thead>
               <tfoot>
@@ -30,6 +31,7 @@
                   <th>Nama_Pantai</th>
                   <th>Harga_Pantai</th>
                   <th>Gambar</th>
+                  <th>Aksi</th>
                 </tr>
               </tfoot>
               <tbody>
@@ -39,15 +41,15 @@
                 foreach ($all_listpantai as $key) :
               ?>
                 <tr>
-                  <td><?php echo $key->id_list ?></td>
+                  <td><?php echo $key->id_pantai ?></td>
                   <td><?php echo $key->nama_pantai ?></td>
                   <td><?php echo $key->harga_pantai ?> </td>
-                  <td><?php echo $key->gambar ?></td>
+                  <td><img src="<?php echo base_url().'uploads/'.$key->thumbnail ?>" width="200px"></td>
                   <td>
                     <div class="btn-group">
                     <!-- Untuk link detail -->
-                    <a href="<?php echo base_url(). 'admin/listpantai_edit/' . $key->id_list ?>" class="btn btn-primary"><span class="fa fa-edit"></span> Edit</a>
-                    <a href="<?php echo base_url(). 'admin/listpantai_delete/' . $key->id_list ?>" onClick="return confirm('Apakah anda yakin ingin menghapus data ini?')" class="btn btn-danger"><span class="fa fa-trash"></span> Hapus</a>
+                    <a href="<?php echo base_url(). 'admin/listpantai_edit/' . $key->id_pantai ?>" class="btn btn-primary"><span class="fa fa-edit"></span> Edit</a>
+                    <a href="<?php echo base_url(). 'admin/listpantai_delete/' . $key->id_pantai ?>" onClick="return confirm('Apakah anda yakin ingin menghapus data ini?')" class="btn btn-danger"><span class="fa fa-trash"></span> Hapus</a>
                 </div>
                   </td>
                 </tr>

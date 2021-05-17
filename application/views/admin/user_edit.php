@@ -1,41 +1,22 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed'); ?><!doctype html>
-<head>
-<title>Tambah user</title>
-<meta charset="utf-8">
-<!-- CSS Files -->
-<link rel="stylesheet" type="text/css" media="screen" href="<?php echo base_url() ?>assets/bigshot/css/style.css">
-<link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/font-awesome/css/font-awesome.min.css">
-<!-- JS Files -->
-<script src="<?php echo base_url() ?>assets/bigshot/js/jquery.min.js"></script>
-<script src="<?php echo base_url() ?>assets/bigshot/js/jquery.eislideshow.js"></script>
-<script src="<?php echo base_url() ?>assets/bigshot/js/custom.js"></script>
-<script src="<?php echo base_url() ?>assets/bigshot/js/slides/slides.min.jquery.js"></script>
-<script src="<?php echo base_url() ?>assets/bigshot/js/cycle-slider/cycle.js"></script>
-<script src="<?php echo base_url() ?>assets/bigshot/js/nivo-slider/jquery.nivo.slider.js"></script>
-<script src="<?php echo base_url() ?>assets/bigshot/js/tabify/jquery.tabify.js"></script>
-<script src="<?php echo base_url() ?>assets/bigshot/js/prettyPhoto/jquery.prettyPhoto.js"></script>
-<script src="<?php echo base_url() ?>assets/bigshot/js/twitter/jquery.tweet.js"></script>
-<script src="<?php echo base_url() ?>assets/bigshot/js/scrolltop/scrolltopcontrol.js"></script>
-<script src="<?php echo base_url() ?>assets/bigshot/js/portfolio/filterable.js"></script>
-<script src="<?php echo base_url() ?>assets/bigshot/js/modernizr/modernizr-2.0.3.js"></script>
-<script src="<?php echo base_url() ?>assets/bigshot/js/easing/jquery.easing.1.3.js"></script>
-<script src="<?php echo base_url() ?>assets/bigshot/js/kwicks/jquery.kwicks-1.5.1.pack.js"></script>
-<script src="<?php echo base_url() ?>assets/bigshot/js/swfobject/swfobject.js"></script>
-<!-- FancyBox -->
-<link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/bigshot/js/fancybox/jquery.fancybox.css" media="all">
-<script src="<?php echo base_url() ?>assets/bigshot/js/fancybox/jquery.fancybox-1.2.1.js"></script>
-</head>
-<body style="background: #FFF">
-<div style="width:100%; background: #FFF">
 
-<div id="container">
-  <div class="one">
-    <div class="heading_bg">
-      <h2><strong><?php	echo $page_title ?></strong></h2>
-    </div>
-  </div>
-  <div class="one-half">
-    
+<div class="content-wrapper">
+    <div class="container-fluid">
+      <!-- Breadcrumbs-->
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="#">Dashboard</a>
+        </li>
+        <li class="breadcrumb-item active">Data user</li>
+      </ol>
+      <!-- Example DataTables Card-->
+      <div class="card mb-3">
+        <div class="card-header">
+          <i class="fa fa-table"></i> <?php echo $page_title ?>
+          </div>
+        <div class="card-body">
+
+
 					<?php    
 						$this->form_validation->set_error_delimiters('<div class="alert alert-warning" role="alert">', '</div>');
 					?>
@@ -67,32 +48,24 @@
 					<div class="form-group">
 					    <label for="">Pilih Status</label>
 					    <div class="form-check">
-					        <input class="form-check-input" type="radio" name="level" id="goldmember" value="admin" checked>
+					        <input class="form-check-input" type="radio" name="level" id="goldmember" value="1" checked>
 					        <label class="form-check-label" for="goldmember">Admin</label>
 					    </div>
 					    <div class="form-check">
-					        <input class="form-check-input" type="radio" name="level" id="goldmember" value="user">
+					        <input class="form-check-input" type="radio" name="level" id="goldmember" value="2">
 					        <label class="form-check-label" for="goldmember">User</label>
+					    </div>
+					    <div class="form-check">
+					        <input class="form-check-input" type="radio" name="level" id="goldmember" value="3">
+					        <label class="form-check-label" for="goldmember">Petugas</label>
 					    </div>
 					</div>
 
 					
 					<button id="submitBtn" type="submit" class="btn btn-primary">Update</button>
 				</form>
-    
-  </div>
-  <div style="clear:both; height: 40px"></div>
-</div>
-	
 
-	<link rel="stylesheet" href="<?php echo base_url() ?>assets/css/bootstrap.min.css">
-	<link rel="stylesheet" href="<?php echo base_url() ?>assets/css/custom.css">
-
-	<script src="<?php echo base_url() ?>assets/js/jquery-1.9.1.min.js"></script>
-    <script src="<?php echo base_url() ?>assets/js/bootstrap.min.js"></script>
-
-    <!-- Plugins -->
-    <script src="<?php echo base_url() ?>assets/js/holder.min.js"></script>
-
-    <!-- Custom -->
-    <script src="<?php echo base_url() ?>assets/js/custom.js"></script>
+        </div>
+        <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+      </div>
+    </div>

@@ -12,7 +12,7 @@
       <!-- Example DataTables Card-->
       <div class="card mb-3">
         <div class="card-header">
-          <i class="fa fa-table"></i> <?php echo $page_title ?>
+          <i class="fa fa-table"></i> <?php echo $page_title ?> (Data pengunjung yang sudah masuk di petugas pasti sudah bayar)
           </div>
           <!-- <?php echo anchor('admin/pesanan_create', 'Add', array('class' => 'btn btn-primary')); ?> -->
         <div class="card-body">
@@ -26,8 +26,6 @@
                   <th>Jumlah</th>
                   <th>Nama Pantai</th>
                   <th>Tanggal</th>
-                  <th>status (klik button)</th>
-                  <th>aksi</th>
                 </tr>
               </thead>
               <tfoot>
@@ -38,8 +36,6 @@
                   <th>Jumlah</th>
                   <th>Nama Pantai</th>
                   <th>Tanggal</th>
-                  <th>status (klik button)</th>
-                  <th>aksi</th>
                 </tr>
               </tfoot>
               <tbody>
@@ -47,6 +43,7 @@
 
               <?php
                 foreach ($all_pesanan as $key) :
+                  if($key->bayar=="sudah"){
               ?>
                 <tr>
                   <td><?php echo $key->kode ?></td>
@@ -55,23 +52,8 @@
                   <td><?php echo $key->jumlah ?></td>
                   <td><?php echo $key->nama_pantai ?></td>
                   <td><?php echo $key->tggl ?></td>
-                  <td>
-                    <div class="btn-group">
-                  <?php if($key->bayar=="sudah"){ ?>
-                    <a href="<?php echo base_url(). 'admin/batalkan_pembayaran/' . $key->id_pesanan ?>" class="btn btn-success" ><span class="fa fa-check"></span> Telah dibayar</a>
-                  <?php }else{?>
-                    <a href="<?php echo base_url(). 'admin/selesaikan_pembayaran/' . $key->id_pesanan ?>" class="btn btn-danger" ><span class="fa fa-close"></span> Belum dibayar</a>
-                  <?php } ?>
-                    </div>
-                  </td>
-                  <td>
-                    <div class="btn-group">
-                    <a href="<?php echo base_url(). 'admin/pesanan_delete/' . $key->id_pesanan ?>" class="btn btn-danger" onClick="return confirm('Apakah anda yakin ingin menghapus data ini?')"><span class="fa fa-trash"></span> Hapus</a>
-                    </div>
-                </div>
-                  </td>
                 </tr>
-              <?php endforeach; ?>
+              <?php } endforeach; ?>
 
               <?php else : ?>
               <p>Belum ada data.</p>

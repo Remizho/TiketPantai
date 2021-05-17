@@ -10,6 +10,8 @@ class User extends CI_Controller{
 		$this->load->library('form_validation');
 		$this->load->helper('MY');
 		$this->load->model('user_model');
+		$this->load->model('pesanan_model');
+		$this->load->model('pantai_model');
 	}
 
 	// Register user
@@ -111,6 +113,18 @@ class User extends CI_Controller{
 		$user_id = $this->session->userdata('user_id');
         // Dapatkan detail user
         $data['user'] = $this->user_model->get_user_details( $user_id );
+
+		// Gunakan fungsi dari model untuk mengisi data dalam dropdown
+		$data['pantai'] = $this->pantai_model->generate_pantai_dropdown();
+
+		$data['page_title'] = 'Pesanan List'; 
+
+		$data['all_pesanan'] = $this->pesanan_model->get_all_pesanan();
+
+		$data['all_favorit'] = $this->pantai_model->get_all_favorit();
+
+		$data['all_pantai'] = $this->pantai_model->get_all_pantai();
+
  		$userData = $this->get_userdata();
         if ($userData['fk_level_id'] === '1'){
             redirect('admin');
@@ -121,6 +135,10 @@ class User extends CI_Controller{
 			$this->load->view('templates/header');
 			$this->load->view('pages/v_dashboard',$data);
 			$this->load->view('templates/footer');
+        } else if ($userData['fk_level_id'] === '3'){
+			$this->load->view('templates/v_petugas_header');
+			$this->load->view('admin/data_pengunjung',$data);
+			$this->load->view('templates/v_petugas_footer');
         } 
 	}
 

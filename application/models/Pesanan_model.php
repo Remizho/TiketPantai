@@ -16,6 +16,7 @@
 
             // Memakai Query Builder
             // Urutkan berdasar id
+            $this->db->join('pantai', 'pantai.id_pantai = pesanan.fk_id_pantai');
 
             $query = $this->db->get('pesanan');
 
@@ -38,12 +39,23 @@
 
         public function create_pesanan()
         {
-             $data = array(
-                'nama_penum'        => $this->input->post('nama_penum'),
-                'no_penum'        => $this->input->post('no_penum'),
-                'asal_penum'        => $this->input->post('asal_penum'),
-                'tujuan_penum'          => $this->input->post('tujuan_penum'),
-                'tggl_penum'          => $this->input->post('tggl_penum')
+            //  $data = array(
+            //     'nama_penum'        => $this->input->post('nama_penum'),
+            //     'no_penum'        => $this->input->post('no_penum'),
+            //     'asal_penum'        => $this->input->post('asal_penum'),
+            //     'tujuan_penum'          => $this->input->post('tujuan_penum'),
+            //     'tggl_penum'          => $this->input->post('tggl_penum')
+            // );
+            $mt_rand = mt_rand(1000, 99999);
+
+            $data = array(
+                'nama'        => $this->input->post('nama'),
+                'jumlah'        => $this->input->post('jumlah'),
+                'kode'        => $mt_rand,
+                'fk_id_pantai'        => $this->input->post('id_pantai'),
+                'tggl'        => $this->input->post('tggl'),
+                'fk_id_user'        => $this->session->userdata('user_id'),
+                'bayar'        => 'belum',
             );
 
             return $this->db->insert('pesanan', $data);
