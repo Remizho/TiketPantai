@@ -17,9 +17,10 @@ class Admin extends CI_Controller {
 
 	public function index()
 	{
+		$data['total_pesanan'] =  $this->pesanan_model->get_total();
 
 		$this->load->view("templates/v_admin_header");
-		$this->load->view('admin/v_dashboard');
+		$this->load->view('admin/v_dashboard', $data);
 		$this->load->view("templates/v_admin_footer");
 	}
 
@@ -188,7 +189,7 @@ class Admin extends CI_Controller {
 		$this->load->library('form_validation');
 
 		$this->form_validation->set_rules('nama', 'nama', 'required',
-			array('required' => 'Isi %s donk.'));
+			array('required' => 'Isi %s ya.'));
 		
 
 		if($this->form_validation->run() === FALSE){
@@ -286,7 +287,7 @@ class Admin extends CI_Controller {
 	    	// Nantinya, URL blog kita menjadi mudah dibaca \
 
 	    	$value = $this->input->post('pantai_favorit');
-			$checked = ($value === FALSE) ? 0 : 1;
+			$checked = isset($POST['pantai_favorit']) ? 1 : 0;
 
 	    	$post_data = array(
 				'nama_pantai'          => $this->input->post('nama_pantai'),

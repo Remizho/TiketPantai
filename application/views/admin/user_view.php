@@ -7,7 +7,7 @@
         <li class="breadcrumb-item">
           <a href="#">Dashboard</a>
         </li>
-        <li class="breadcrumb-item active">Data user</li>
+        <li class="breadcrumb-item active">Data User</li>
       </ol>
       <!-- Example DataTables Card-->
       <div class="card mb-3">
@@ -70,6 +70,5 @@
             </table>
           </div>
         </div>
-        <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
       </div>
     </div>

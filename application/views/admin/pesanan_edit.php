@@ -1,6 +1,6 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed'); ?><!doctype html>
 <head>
-<title>Tambah pesanan</title>
+<title>Edit Pesanan</title>
 <meta charset="utf-8">
 <!-- CSS Files -->
 <link rel="stylesheet" type="text/css" media="screen" href="<?php echo base_url() ?>assets/bigshot/css/style.css">

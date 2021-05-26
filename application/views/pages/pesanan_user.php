@@ -64,7 +64,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       <table border="1">
         <tr>
           <th>
-            Kode Booking
+            Kode Booking 
           </th>
           <th>
             Atas nama

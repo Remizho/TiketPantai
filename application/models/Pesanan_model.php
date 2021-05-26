@@ -24,6 +24,22 @@
             return $query->result();
         }
 
+        public function get_all_pesanan_sesuai_user($id) {
+            // Query Manual
+            // $query = $this->db->query('
+            //      SELECT * FROM pesanan
+            //  ');
+
+            // Memakai Query Builder
+            // Urutkan berdasar id
+            $this->db->join('pantai', 'pantai.id_pantai = pesanan.fk_id_pantai');
+            $query = $this->db->get_where('pesanan', array('fk_id_user' => $id));
+            // $query = $this->db->get('pesanan');
+
+            // Return dalam bentuk object
+            return $query->result();
+        }
+
         public function get_total() 
         {
             // Dapatkan jumlah total artikel
@@ -80,5 +96,9 @@
                 return false;
             }
         }
+
+        function total_rows() {
+            return $this->db->get_where('pesanan', array('bayar' => 'sudah'))->num_rows();
+          }
 
     }

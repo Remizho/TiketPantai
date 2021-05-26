@@ -59,7 +59,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <div style="margin-left: 40px;margin-right: 40px;margin-top: 50px;margin-bottom: 50px;">
     <center>
       <p>
-        Ini adalah website penyedia layanan e-ticketing untuk pantai di malang selatan.
+        Mantai Ngalam adalah sebuah website yang bergerak dibidang pariwisata di wilayah Malang Selatan yang berfokus kepada pariwisata Pantai Malang Selatan. Website ini dikerjakan oleh Kelompok 5 kelas Pemrograman Web - E yang beranggotakan Ayu Pramadita Dewi, M. Aulia Utama, dan Remizar Fahrezi Achyar Firdaus. Kami membuat website ini. Website Mantai Ngalam menyediakan layanan E-Ticketing untuk beberapa pantai yang ada di daerah Malang Selatan. Kami bekerja sama dengan Dinas Pariwisata Kabupaten Malang untuk menjalankan website ini, agar legalitas dari website ini tetap terjaga. Kami juga bekerja sama dengan penyedia jasa pariwisata di pantai Malang Selatan untuk proses layanan ticketing, sehingga para pengunjung yang ingin berlibur ke pantai tidak perlu jauh-jauh datang ke pantai terlebih dahulu. Nantinya pengunjung yang akan datang hanya menunjukkan bukti booking tiket yang tersedia dimenu website, lalu penjaga pantai akan memeriksa kevalidan dari tiket yang telah dibeli tersebut sebelum memasuki pantai. 
       </p>
     </center>
   </div>
@@ -79,9 +79,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </div>
     <div class="special_content">
       <div class="special_slider_container">
-        <div class="owl-carousel owl-theme special_slider">
-          
-          
+        <div class="owl-carousel owl-theme special_slider">          
           <?php foreach ($all_pantai as $item) { ?>
             <div class="owl-item">
               <div class="special_item">

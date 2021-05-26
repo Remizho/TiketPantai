@@ -32,8 +32,9 @@ class Home extends CI_Controller {
 
 	public function pesan_berhasil()
 	{
+		$data['all_pantai'] = $this->pantai_model->get_all_pantai();
 		$this->load->view('templates/header');
-		$this->load->view('pages/pesan_berhasil');
+		$this->load->view('pages/pesan_berhasil', $data);
 		$this->load->view('templates/footer');
 	
 	}
@@ -79,7 +80,9 @@ class Home extends CI_Controller {
 
 	public function pesanan_user()
 	{
-		$data['all_pesanan'] = $this->pesanan_model->get_all_pesanan();
+		$id = $this->session->userdata('user_id');
+		// print_r($id);
+		$data['all_pesanan'] = $this->pesanan_model->get_all_pesanan_sesuai_user($id);
 
 		$this->load->view('templates/header');
 		$this->load->view('pages/pesanan_user', $data);

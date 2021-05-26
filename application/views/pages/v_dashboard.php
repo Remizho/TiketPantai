@@ -93,20 +93,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <input type="date" class="destination find_input" name="tggl" style="background-color: white;color: black;" required="required">
               </div>
               <div class="" style="width: 356px;">
-                <div style="color: white">Tujuan:</div>
-                <!-- <select class="destination find_input" required="required">
-                  <option value="">Pilih Disini</option>
-                  <option value="cina">Pantai Goa China</option>
-                  <option value="ngantep">Pantai Ngantep</option>
-                  <option value="ngliyep">Pantai Ngliyep</option>
-                  <option value="sendiki">Pantai Sendiki</option>
-                </select> -->
-                <?php echo form_dropdown('id_pantai', $pantai, 'class="destination find_input"' ); ?>
-                <!-- <input type="text" class="destination find_input"  name="tujuan_penum" required="required" placeholder="Keyword here"> -->
-              </div>
-              <div class="" style="width: 356px;">
                 <div style="color: white">Jumlah Pengunjung</div>
                 <input type="number" min="0" style="background-color: white;color: black;" class="destination find_input" name="jumlah" required="required">
+              </div>
+              <div class="" style="width: 356px;">
+                <div style="color: white">Tujuan:</div>
+                <?php echo form_dropdown('id_pantai', $pantai, 'class="destination find_input"' ); ?>
               </div>
               <button type="submit" class="button find_button">Pesan</button>
             </form>
@@ -123,7 +115,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       <div class="row">
         <div class="col">
           <div class="section_title text-center">
-            <h2>DESTINASI FAVORIT PANTAI NGALAM</h2>
+            <h2 style="margin-top: -80px">DESTINASI FAVORIT PANTAI NGALAM</h2>
             <div>temukan pantai idaman anda</div>
           </div>
         </div>
@@ -149,7 +141,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         
 
         <!-- <div class="col-lg-3 col-md-6 top_col">
-
           Top Destination Item
           <div class="top_item">
             <a href="<?php echo base_url() ?>home/detail_pantai2">
@@ -161,9 +152,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </a>
           </div>
         </div>
-
         <div class="col-lg-3 col-md-6 top_col">
-
           Top Destination Item
           <div class="top_item">
             <a href="<?php echo base_url() ?>home/detail_pantai3">
@@ -175,9 +164,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </a>
           </div>
         </div>
-
         <div class="col-lg-3 col-md-6 top_col">
-
           Top Destination Item 
           <div class="top_item">
             <a href="<?php echo base_url() ?>home/detail_pantai4">
@@ -198,7 +185,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
   <!-- <div class="last">
     <div class="last_background parallax-window" data-parallax="scroll" data-image-src="<?php echo base_url() ?>assets/destino/images/last.jpg" data-speed="0.8"></div>
-
     <div class="container">
       <div class="row">
         <div class="last_logo"><img src="<?php echo base_url() ?>assets/destino/images/last_logo.png" alt=""></div>
@@ -235,7 +221,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       <div class="row">
         <div class="col">
           <div class="section_title text-center">
-            <h2>PROMO ANDA</h2>
+            <h2 style="margin-top: -100px">PROMO ANDA</h2>
             <div>jangan sampai terlewat</div>
           </div>
         </div>
@@ -271,7 +257,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               </div>
             </div>
           </div>
-
           
           <div class="owl-item">
             <div class="special_item d-flex flex-column align-items-center justify-content-center">
@@ -282,7 +267,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               </div>
             </div>
           </div>
-
           
           <div class="owl-item">
             <div class="special_item d-flex flex-column align-items-center justify-content-center">
@@ -293,7 +277,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               </div>
             </div>
           </div>
-
           
           <div class="owl-item">
             <div class="special_item d-flex flex-column align-items-center justify-content-center">
@@ -337,7 +320,3 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       </div>
     </div>
   </div> -->
-
-  <!-- Footer -->
-
- 

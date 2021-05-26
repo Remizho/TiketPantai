@@ -47,7 +47,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   
   <!-- Home -->
 
-  <div class="home"">
+  <div class="home">
     <div class="home_background" style="background-image:url(<?php echo base_url() ?>assets/destino/images/home.jpg)"></div>
     <div class="home_background" style="background-color: rgba(0,0,0,0.5);"></div>
     <div class="home_content">
@@ -116,7 +116,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       <div class="row">
         <div class="col">
           <div class="section_title text-center">
-            <h2>DESTINASI FAVORIT PANTAI NGALAM</h2>
+            <h2 style="margin-top: -100px">DESTINASI FAVORIT PANTAI NGALAM</h2>
             <div>temukan pantai idaman anda</div>
           </div>
         </div>
@@ -141,7 +141,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         
 
         <!-- <div class="col-lg-3 col-md-6 top_col">
-
           
           <div class="top_item">
             <a href="<?php echo base_url() ?>home/detail_pantai">
@@ -153,9 +152,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </a>
           </div>
         </div>
-
         <div class="col-lg-3 col-md-6 top_col">
-
           
           <div class="top_item">
             <a href="<?php echo base_url() ?>home/detail_pantai2">
@@ -167,9 +164,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </a>
           </div>
         </div>
-
         <div class="col-lg-3 col-md-6 top_col">
-
           
           <div class="top_item">
             <a href="<?php echo base_url() ?>home/detail_pantai3">
@@ -181,9 +176,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </a>
           </div>
         </div>
-
         <div class="col-lg-3 col-md-6 top_col">
-
           
           <div class="top_item">
             <a href="<?php echo base_url() ?>home/detail_pantai4">
@@ -204,7 +197,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
   <!-- <div class="last">
     <div class="last_background parallax-window" data-parallax="scroll" data-image-src="<?php echo base_url() ?>assets/destino/images/last.jpg" data-speed="0.8"></div>
-
     <div class="container">
       <div class="row">
         <div class="last_logo"><img src="<?php echo base_url() ?>assets/destino/images/last_logo.png" alt=""></div>
@@ -241,7 +233,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       <div class="row">
         <div class="col">
           <div class="section_title text-center">
-            <h2>PROMO ANDA</h2>
+            <h2 style="margin-top: -100px">PROMO ANDA</h2>
             <div>jangan sampai terlewat</div>
           </div>
         </div>
@@ -298,7 +290,3 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       </div>
     </div>
   </div> -->
-
-  <!-- Footer -->
-
- 

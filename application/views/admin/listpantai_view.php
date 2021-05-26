@@ -5,7 +5,7 @@
         <li class="breadcrumb-item">
           <a href="#">Dashboard</a>
         </li>
-        <li class="breadcrumb-item active">Data user</li>
+        <li class="breadcrumb-item active">Data Pantai</li>
       </ol>
 
       <div class="card mb-3">

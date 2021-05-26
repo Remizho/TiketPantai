@@ -7,7 +7,7 @@
         <li class="breadcrumb-item">
           <a href="#">Dashboard</a>
         </li>
-        <li class="breadcrumb-item active">Data user</li>
+        <li class="breadcrumb-item active">Tambah Informasi Pantai</li>
       </ol>
       <!-- Example DataTables Card-->
       <div class="card mb-3">
@@ -16,9 +16,7 @@
           </div>
         <div class="card-body">
           
-        	<?php
-						$this->form_validation->set_error_delimiters('<div class="alert alert-warning" role="alert">', '</div>');
-					?>
+        	<?php $this->form_validation->set_error_delimiters('<div class="alert alert-warning" role="alert">', '</div>');?>
 					<?php echo validation_errors(); ?>
 					<?php echo (isset( $upload_error)) ? '<div class="alert alert-warning" role="alert">' .$upload_error. '</div>' : ''; ?>
 					<?php echo form_open_multipart( 'admin/listpantai_create', array('class' => 'needs-validation', 'novalidate' => '') ); ?>
@@ -49,8 +47,6 @@
 					
 					<button id="submitBtn" type="submit" class="btn btn-primary">Tambah</button>
 				</form>
-
         </div>
-        <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
       </div>
     </div>
